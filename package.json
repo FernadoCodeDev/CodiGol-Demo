@@ -9,6 +9,7 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.31.1",
     "autoprefixer": "^10.0.0",
     "postcss": "^8.0.0",
     "react": "^19.1.0",

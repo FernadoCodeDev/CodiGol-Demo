@@ -1,16 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Level/page/Home"; // Home LandingMine Page
+import Home from "./Level/page/Home";
+import { ClerkProvider } from "@clerk/clerk-react";
+
+const clerkFrontendApi = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        {/* Routes for each page */}
-        <Route path="/" element={<Home />} />
-      
-      </Routes>
-    </Router>
+    <ClerkProvider publishableKey={clerkFrontendApi}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+    </ClerkProvider>
   );
 };
 
