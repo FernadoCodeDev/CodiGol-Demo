@@ -8,8 +8,24 @@ import {
 import Background from "../../assets/img/Background.webp";
 import { ClerkProvider } from "@clerk/clerk-react";
 import Modal from "../ui/Modal";
+import { useUser } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const { isSignedIn } = useUser();
+  const navigate = useNavigate();
+
+  const handlePlayClick = () => {
+    if (isSignedIn) {
+      navigate("/partido/1");
+      console.log("Registro ");
+    } else {
+      // If not logged in, display the Clerk modal
+      document.querySelector("[data-clerk-sign-in-button]").click();
+      console.log("No Registro ");
+    }
+  };
+
   return (
     <div className="relative w-full min-h-screen">
       <div
@@ -24,21 +40,27 @@ const Home = () => {
           Bienvenido a <span className="text-yellow-500">CódiGol</span>
         </h1>
         <p className="max-w-xl mb-8 text-lg md:text-xl">
-          Aprende <span className="font-bold text-yellow-400">Tailwind CSS</span> jugando
-          y dominando estilos como un pro.
+          Aprende{" "}
+          <span className="font-bold text-yellow-400">Tailwind CSS</span>{" "}
+          jugando y dominando estilos como un pro.
         </p>
 
         <div className="flex flex-col w-full max-w-xs gap-4">
-          <button className="px-6 py-3 font-bold text-black transition-all bg-yellow-500 hover:bg-yellow-600 rounded-xl">
+          <button
+            onClick={handlePlayClick}
+            className="px-6 py-3 font-bold text-black transition-all bg-yellow-500 hover:bg-yellow-600 rounded-xl"
+          >
             ¡Jugar Ahora!
           </button>
           <Modal />
 
           <SignedOut>
-            <SignInButton mode="modal">
-              <button className="px-6 py-2 text-white transition bg-black border border-white rounded-xl hover:bg-white hover:text-black">
-                Iniciar sesión
-              </button>
+            <SignInButton
+              mode="modal"
+              afterSignInUrl="/"
+              className="px-6 py-2 text-white transition bg-black border border-white rounded-xl hover:bg-white hover:text-black"
+            >
+              Iniciar sesión
             </SignInButton>
           </SignedOut>
           <SignedIn>
@@ -46,10 +68,16 @@ const Home = () => {
           </SignedIn>
         </div>
 
+        {!isSignedIn && (
+          <p className="text-sm text-yellow-300">
+            Debes iniciar sesión para comenzar a jugar.
+          </p>
+        )}
+
         <p className="mt-10 text-sm opacity-70">
           Proyecto creado para la{" "}
           <a
-          className="font-bold transition duration-300 ease-in-out hover:text-yellow-500"
+            className="font-bold transition duration-300 ease-in-out hover:text-yellow-500"
             href="https://github.com/midudev/hackaton-clerk-2025?tab=readme-ov-file#%EF%B8%8F-c%C3%B3mo-participar-en-la-hackat%C3%B3n"
             target="_blank"
             rel="noopener noreferrer"
