@@ -10,9 +10,7 @@ const Home = () => {
       ></div>
 
       <div className="relative grid items-start h-auto min-h-screen grid-cols-2 gap-2 p-4 md:grid-cols-3">
-      
-<h1 className="">AAAAA</h1>
-
+        <h1 className="">AAAAA</h1>
       </div>
     </div>
   );
