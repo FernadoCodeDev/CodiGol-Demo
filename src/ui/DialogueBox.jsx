@@ -28,7 +28,7 @@ const DialogueBox = ({ level = 1 }) => {
         <img
           src={TrainerPose1}
           alt="TrainerPose1"
-          className="object-contain w-40 md:w-56 lg:w-64"
+          className="z-40 object-contain w-40 md:w-56 lg:w-64"
         />
       )}
 

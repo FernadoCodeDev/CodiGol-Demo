@@ -3,6 +3,9 @@ import React, { useRef } from "react";
 import TestFund from "../assets/img/TestFund.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
+import TrainingPoint from "../ui/TrainingPoint";
+import Clock from "../ui/Clock";
+import RivalGoalkeeper from "../assets/img/RivalGoalkeeper.webp";
 
 const Game = () => {
   return (
@@ -21,6 +24,16 @@ const Game = () => {
           <h1 className="text-5xl font-bold text-black md:text-6xl drop-shadow-lg">
             Lección 5: Game
           </h1>
+
+          <img
+            src={RivalGoalkeeper}
+            alt="RivalGoalkeeper"
+            className="absolute z-30 object-contain w-80 top-1/4 right-1/2"
+          />
+
+          <Clock />
+
+          <TrainingPoint />
 
           <DialogueBox />
         </div>
