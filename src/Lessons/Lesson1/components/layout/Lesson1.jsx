@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import trainingFund from "../../../assets/img/TrainingFund.webp";
+import Navegation from "../../../GlobalComponent/Navegation";
+import TrainerPose1 from "../../../assets/img/TrainerPose1.webp";
 
 const Lesson1 = () => {
   return (
@@ -9,10 +11,33 @@ const Lesson1 = () => {
         style={{ backgroundImage: `url(${trainingFund})` }}
       ></div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center text-white">
-        <h1 className="mb-4 text-5xl font-bold text-black md:text-6xl">
-          Lección 1 CódiGol
-        </h1>
+      <div className="grid items-center justify-center grid-cols-4 gr ">
+        <div className="relative z-20 h-full ">
+          <Navegation />
+        </div>
+
+        <div className="relative grid min-h-screen grid-cols-1 col-span-3 ">
+          <h1 className="text-5xl font-bold text-black md:text-6xl drop-shadow-lg">
+            Lección 1: Introducción a Tailwind
+          </h1>
+
+          <div className="flex items-end justify-center max-w-7xl">
+            <img
+              src={TrainerPose1}
+              alt="TrainerPose1"
+              className="object-contain w-40 md:w-56 lg:w-64"
+            />
+
+            <div className="flex-1 max-w-4xl p-6 mb-4 mr-4 text-lg text-black bg-white rounded-lg shadow-xl bg-opacity-80 md:text-xl">
+              <p>
+                ¡Bienvenido jugador! Yo seré tu entrenador y juntos aprenderemos
+                a usar{" "}
+                <span className="font-bold text-blue-700">Tailwind CSS</span>.
+                Hoy comenzaremos con lo más básico: cómo estructurar con clases.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
