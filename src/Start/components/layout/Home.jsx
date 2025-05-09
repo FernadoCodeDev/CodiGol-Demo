@@ -18,7 +18,7 @@ const Home = () => {
 
   const handlePlayClick = () => {
     if (isSignedIn) {
-      navigate("/partido/1");
+      navigate("/Lesson1");
       console.log("Registro ");
     } else {
       signInButtonRef.current?.click();
