@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   SignInButton,
   SignedIn,
@@ -6,7 +6,6 @@ import {
   UserButton,
 } from "@clerk/clerk-react";
 import Background from "../../assets/img/Background.webp";
-import { ClerkProvider } from "@clerk/clerk-react";
 import Modal from "../ui/Modal";
 import { useUser } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
@@ -15,13 +14,15 @@ const Home = () => {
   const { isSignedIn } = useUser();
   const navigate = useNavigate();
 
+  const signInButtonRef = useRef(null); // Creamos una referencia al botón
+
   const handlePlayClick = () => {
     if (isSignedIn) {
       navigate("/partido/1");
       console.log("Registro ");
     } else {
-      // If not logged in, display the Clerk modal
-      document.querySelector("[data-clerk-sign-in-button]").click();
+      // Usamos la referencia para simular el clic
+      signInButtonRef.current?.click();
       console.log("No Registro ");
     }
   };
@@ -40,9 +41,7 @@ const Home = () => {
           Bienvenido a <span className="text-yellow-500">CódiGol</span>
         </h1>
         <p className="max-w-xl mb-8 text-lg md:text-xl">
-          Aprende{" "}
-          <span className="font-bold text-yellow-400">Tailwind CSS</span>{" "}
-          jugando y dominando estilos como un pro.
+          Aprende <span className="font-bold text-yellow-400">Tailwind CSS</span> jugando y dominando estilos como un pro.
         </p>
 
         <div className="flex flex-col w-full max-w-xs gap-4">
@@ -52,17 +51,19 @@ const Home = () => {
           >
             ¡Jugar Ahora!
           </button>
+
           <Modal />
 
           <SignedOut>
+            {/* Este botón está oculto pero usaremos su funcionalidad */}
             <SignInButton
               mode="modal"
               afterSignInUrl="/"
-              className="px-6 py-2 text-white transition bg-black border border-white rounded-xl hover:bg-white hover:text-black"
-            >
-              Iniciar sesión
-            </SignInButton>
+              ref={signInButtonRef}
+              className="hidden" // lo ocultamos visualmente
+            />
           </SignedOut>
+
           <SignedIn>
             <UserButton afterSignOutUrl="/" />
           </SignedIn>
