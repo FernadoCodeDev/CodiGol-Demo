@@ -1,3 +1,5 @@
+//Generic dialog box
+
 import { useState } from "react";
 import TrainerPose1 from "../assets/img/TrainerPose1.webp";
 import dialogues from "../data/Dialogue";
