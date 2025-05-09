@@ -3,7 +3,7 @@ import React from "react";
 export default function TrainingPoint() {
   return (
     <div className="flex items-center justify-center w-full">
-      <div className="absolute w-full h-full bg-green-200/40">
+      <div className="absolute w-full h-full ">
         {/* Interactive points */}
         <Point top="42%" left="65%" />
         <Point top="44%" left="2%" />
