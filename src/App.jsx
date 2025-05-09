@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ClerkProvider } from "@clerk/clerk-react";
 const clerkFrontendApi = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 
-import Home from "./Start/page/Home";
-import Lesson1 from "./Lessons/Lesson1/page/Lesson1"
+import Home from "./page/Home";
+import LessonIntro from "./page/LessonIntro"
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Lesson1" element={<Lesson1 />} />
+          <Route path="/LessonIntro" element={<LessonIntro />} />
 
         </Routes>
       </Router>

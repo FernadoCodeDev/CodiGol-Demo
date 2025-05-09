@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MobileMenu from "../assets/img/MobileMenu.webp";
 import CloseMenuIcon from "../assets/svg/Close";
-import Modal from "./Modal";
+import ModalInNavigation from "./ModalInNavigation";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -82,7 +82,7 @@ const Navigation = () => {
         </nav>
       )}
 
-      <Modal isOpen={isModalOpen} toggleModal={toggleModal} />
+      <ModalInNavigation isOpen={isModalOpen} toggleModal={toggleModal} />
 
       {/* Button to open menu on screens smaller than 768 px */}
       {/* menuOpen makes sure that when the menu is opened the image is hidden */}

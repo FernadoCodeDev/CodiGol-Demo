@@ -1,10 +1,10 @@
+//Lesson Introduction
 import React, { useRef } from "react";
-import trainingFund from "../../../assets/img/TrainingFund.webp";
-import Navigation from "../../../GlobalComponent/Navigation";
+import trainingFund from "../assets/img/TrainingFund.webp";
+import Navigation from "../ui/Navigation";
+import DialogueBox from "../ui/DialogueBox"
 
-import DialogueBox from "../../../GlobalComponent/DialogueBox"
-
-const Lesson1 = () => {
+const LessonIntro = () => {
   return (
     <div className="relative w-full min-h-screen">
       <div
@@ -29,4 +29,4 @@ const Lesson1 = () => {
   );
 };
 
-export default Lesson1;
+export default LessonIntro;
