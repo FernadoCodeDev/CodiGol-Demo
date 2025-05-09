@@ -14,14 +14,13 @@ const Home = () => {
   const { isSignedIn } = useUser();
   const navigate = useNavigate();
 
-  const signInButtonRef = useRef(null); // Creamos una referencia al botón
+  const signInButtonRef = useRef(null);
 
   const handlePlayClick = () => {
     if (isSignedIn) {
       navigate("/partido/1");
       console.log("Registro ");
     } else {
-      // Usamos la referencia para simular el clic
       signInButtonRef.current?.click();
       console.log("No Registro ");
     }
@@ -55,12 +54,12 @@ const Home = () => {
           <Modal />
 
           <SignedOut>
-            {/* Este botón está oculto pero usaremos su funcionalidad */}
+        
             <SignInButton
               mode="modal"
               afterSignInUrl="/"
               ref={signInButtonRef}
-              className="hidden" // lo ocultamos visualmente
+              className="hidden" 
             />
           </SignedOut>
 
