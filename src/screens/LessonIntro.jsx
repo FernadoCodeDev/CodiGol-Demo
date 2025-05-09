@@ -12,12 +12,12 @@ const LessonIntro = () => {
         style={{ backgroundImage: `url(${trainingFund})` }}
       ></div>
 
-      <div className="grid items-center justify-center grid-cols-4 gr ">
+      <div className="grid items-center justify-center grid-cols-5 ">
         <div className="relative z-20 h-full ">
           <Navigation />
         </div>
 
-        <div className="relative grid min-h-screen grid-cols-1 col-span-3 ">
+        <div className="relative grid min-h-screen grid-cols-1 col-span-4 ">
           <h1 className="text-5xl font-bold text-black md:text-6xl drop-shadow-lg">
             Lección 1: Introducción a Tailwind
           </h1>
