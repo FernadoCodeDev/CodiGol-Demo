@@ -64,7 +64,7 @@ const Navigation = () => {
 
       {/* menu larger than 72px*/}
       {!isMobile && (
-        <nav className="w-64 p-4 text-white bg-black/70 backdrop-blur-[4px] ">
+        <nav className="w-full p-4 text-white bg-black/70 backdrop-blur-[4px] ">
           <div className="flex flex-col justify-between gap-2 pt-8 ">
             <h1 className="mb-4 text-5xl font-bold md:text-6xl">CódiGol</h1>
             <button
