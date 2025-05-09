@@ -5,20 +5,6 @@ import ModalInNavigation from "./ModalInNavigation";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false); // Small Screen Check
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen); // Menu Status
@@ -30,11 +16,10 @@ const Navigation = () => {
 
   return (
     <div className="flex flex-row min-h-screen ">
-      {/*Menu sizes less than 720 px */}
-      {isMobile && (
+
+      {menuOpen && (
         <div
-          className={`fixed text-white top-0 left-0 w-full h-full bg-black/70 backdrop-blur-[4px] transition-transform duration-500 ease-in-out transform z-50 
-            ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
+          className={`fixed text-white top-0 left-0 w-full max-w-[500px] h-full bg-black/70 backdrop-blur-[4px] transition-transform duration-500 ease-in-out transform z-50`}
         >
           {/* Close menu */}
           <CloseMenuIcon
@@ -62,31 +47,9 @@ const Navigation = () => {
         </div>
       )}
 
-      {/* menu larger than 72px*/}
-      {!isMobile && (
-        <nav className="w-full p-4 text-white bg-black/70 backdrop-blur-[4px] ">
-          <div className="flex flex-col justify-between gap-2 pt-8 ">
-            <h1 className="mb-4 text-4xl font-bold">CódiGol</h1>
-            <button
-              onClick={toggleModal}
-              className="w-full px-6 py-2 font-semibold text-black bg-white hover:bg-gray-200 rounded-xl"
-            >
-              Instrucciones
-            </button>
-            <a href="/">
-              <button className="w-full px-6 py-2 font-semibold text-black bg-white hover:bg-gray-200 rounded-xl">
-                Regresar
-              </button>
-            </a>
-          </div>
-        </nav>
-      )}
-
       <ModalInNavigation isOpen={isModalOpen} toggleModal={toggleModal} />
 
-      {/* Button to open menu on screens smaller than 768 px */}
-      {/* menuOpen makes sure that when the menu is opened the image is hidden */}
-      {isMobile && !menuOpen && (
+      {!menuOpen && (
         <img
           src={MobileMenu}
           alt="Mobile Menu"
