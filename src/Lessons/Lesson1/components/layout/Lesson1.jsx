@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import trainingFund from "../../../assets/img/TrainingFund.webp";
-import Navegation from "../../../GlobalComponent/Navegation";
+import Navigation from "../../../GlobalComponent/Navigation";
 import TrainerPose1 from "../../../assets/img/TrainerPose1.webp";
 
 const Lesson1 = () => {
@@ -13,7 +13,7 @@ const Lesson1 = () => {
 
       <div className="grid items-center justify-center grid-cols-4 gr ">
         <div className="relative z-20 h-full ">
-          <Navegation />
+          <Navigation />
         </div>
 
         <div className="relative grid min-h-screen grid-cols-1 col-span-3 ">

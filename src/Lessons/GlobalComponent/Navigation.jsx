@@ -3,7 +3,7 @@ import MobileMenu from "../assets/img/MobileMenu.webp";
 import CloseMenuIcon from "../assets/svg/Close";
 import Modal from "./Modal";
 
-const Navegation = () => {
+const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false); // Small Screen Check
 
@@ -98,4 +98,4 @@ const Navegation = () => {
   );
 };
 
-export default Navegation;
+export default Navigation;
