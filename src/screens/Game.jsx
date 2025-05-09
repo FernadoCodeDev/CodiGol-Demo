@@ -28,7 +28,7 @@ const Game = () => {
           <img
             src={RivalGoalkeeper}
             alt="RivalGoalkeeper"
-            className="absolute z-30 object-contain w-80 top-1/4 right-1/2"
+            className="absolute  object-contain w-80 top-1/4 right-1/2"
           />
 
           <Clock />

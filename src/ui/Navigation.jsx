@@ -16,10 +16,11 @@ const Navigation = () => {
 
   return (
     <div className="flex flex-row min-h-screen ">
-
       {menuOpen && (
         <div
-          className={`fixed text-white top-0 left-0 w-full max-w-[500px] h-full bg-black/70 backdrop-blur-[4px] transition-transform duration-500 ease-in-out transform z-50`}
+          className={`fixed text-white top-0 left-0 w-full max-w-80 h-full bg-black/70 backdrop-blur-[4px] transition-transform duration-700 ease-in-out transform z-50 ${
+            menuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
         >
           {/* Close menu */}
           <CloseMenuIcon

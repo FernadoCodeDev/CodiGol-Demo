@@ -18,7 +18,7 @@ export default function TrainingPoint() {
 function Point({ top, left }) {
   return (
     <div
-      className="absolute z-20 w-16 h-16 transition-all duration-300 ease-in-out bg-orange-500 border-2 border-white rounded-full shadow-md"
+      className="absolute w-16 h-16 transition-all duration-300 ease-in-out bg-orange-500 border-2 border-white rounded-full shadow-md"
       style={{ top, left, transform: "translate(-50%, -50%)" }}
     ></div>
   );
