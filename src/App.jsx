@@ -11,6 +11,7 @@ import SubBench from "./page/SubBench";
 import Game from "./page/Game";
 import FinalScore from "./page/FinalScore";
 import LeagueTable from "./page/LeagueTable";
+import Prove from "./page/Prove";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/Game" element={<Game />} />
           <Route path="/FinalScore" element={<FinalScore />} />
           <Route path="/LeagueTable" element={<LeagueTable />} />
+          <Route path="/Prove" element={<Prove />} />
         </Routes>
       </Router>
     </ClerkProvider>
