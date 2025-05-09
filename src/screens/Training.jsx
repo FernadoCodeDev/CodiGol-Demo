@@ -2,7 +2,9 @@
 import React, { useRef } from "react";
 import trainingFund from "../assets/img/ExerciseFund.webp";
 import Navigation from "../ui/Navigation";
-import DialogueBox from "../ui/DialogueBox"
+import DialogueBox from "../ui/DialogueBox";
+import TrainingPoint from "../ui/TrainingPoint";
+import Clock from "../ui/Clock";
 
 const Training = () => {
   return (
@@ -22,7 +24,11 @@ const Training = () => {
             Lección 2: Entrenamiento práctico
           </h1>
 
-       <DialogueBox />
+          <Clock />
+
+          <TrainingPoint />
+
+          <DialogueBox />
         </div>
       </div>
     </div>
