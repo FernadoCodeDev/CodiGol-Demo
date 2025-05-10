@@ -1,11 +1,19 @@
 //Final result of the match
 import React, { useRef } from "react";
+import { useGame } from "../context/GameContext";
 import Background from "../assets/img/Background.webp";
 import Navigation from "../ui/Navigation";
 import WindJaguars from "../assets/img/WindJaguars.webp";
 import GemRubies from "../assets/img/GemRubies.webp";
 
 const FinalScore = () => {
+
+  const { nextLevel } = useGame();
+
+  const handleContinue = () => {
+    nextLevel(); 
+  };
+
   return (
     <div className="relative w-full min-h-screen">
       <div
@@ -49,7 +57,7 @@ const FinalScore = () => {
             </div>
 
             <button
-              //onClick={handleNext}
+              onClick={handleContinue}
               className="col-start-3 px-4 py-2 m-4 font-semibold text-white bg-blue-700 rounded hover:bg-blue-800"
             >
               Siguiente

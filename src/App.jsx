@@ -12,8 +12,10 @@ import Game from "./page/Game";
 import FinalScore from "./page/FinalScore";
 import LeagueTable from "./page/LeagueTable";
 import Prove from "./page/Prove";
+import DialogueBox from "./ui/DialogueBox";
 
 const App = () => {
+  
   return (
     <ClerkProvider publishableKey={clerkFrontendApi}>
       <Router>

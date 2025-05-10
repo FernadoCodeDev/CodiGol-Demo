@@ -3,8 +3,10 @@
 import { useState } from "react";
 import TrainerPose1 from "../assets/img/TrainerPose1.webp";
 import dialogues from "../data/Dialogue";
+import { useGame } from "../context/GameContext"; //  context
 
 const DialogueBox = ({ level = 1 }) => {
+   const { currentLevel } = useGame();
   const [index, setIndex] = useState(0);
   const currentDialogue = dialogues[level];
 
