@@ -24,14 +24,14 @@ const Training = () => {
         style={{ backgroundImage: `url(${trainingFund})` }}
       ></div>
 
+          <Navigation />
+
       <div className="grid items-center justify-center grid-cols-4 ">
       
-       <div className="relative h-full ">
-
-          <Navigation className="absolute"/>
-          <Preview />
+       <div className="relative h-[85%] mt-32 ">
+          <Preview code={code} setCode={setCode}/>
        </div>
-    
+       
         <div className="relative grid min-h-screen grid-cols-1 col-span-3">
           <h1 className="text-5xl font-bold text-black md:text-6xl drop-shadow-lg">
             Lección 2: Entrenamiento práctico
@@ -39,7 +39,7 @@ const Training = () => {
 
           <Clock />
 
-          <TrainingPoint />
+        {/* <TrainingPoint /> */ } 
 
          { /* <DialogueBox /> */} 
 

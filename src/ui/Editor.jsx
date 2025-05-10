@@ -5,7 +5,7 @@ export default function Editor({ code, setCode }) {
     <textarea
       value={code}
       onChange={(e) => setCode(e.target.value)}
-      className="w-full h-64 p-4 font-mono text-sm bg-white border rounded shadow"
+      className="flex-1 w-full max-w-4xl p-6 m-auto text-lg text-black bg-white rounded-lg shadow-xl resize-none h-1/2 bg-opacity-80 md:text-xl"
     />
   );
 }
