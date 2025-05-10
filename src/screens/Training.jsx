@@ -5,9 +5,9 @@ import trainingFund from "../assets/img/ExerciseFund.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
 import TrainingPoint from "../ui/TrainingPoint";
+import Clock from "../ui/Clock";
 import Preview from "../ui/Preview";
 import Editor from "../ui/Editor";
-import Clock from "../ui/Clock";
 
 const defaultCode = `
 <div class="p-4 bg-blue-500 text-white rounded-lg">
