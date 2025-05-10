@@ -33,24 +33,6 @@ const dialogues = {
       speaker: "trainer",
       text: "Son muy útiles para separar elementos sin usar CSS clásico.",
     },
-    {
-      speaker: "player",
-      text: "¿Puedo practicar ahora?",
-    },
-  ],
-  3: [
-    {
-      speaker: "trainer",
-      text: "Ahora veremos cómo aplicar colores y cambiar el texto con clases utilitarias.",
-    },
-    {
-      speaker: "trainer",
-      text: "Es muy sencillo y muy poderoso para crear diseños llamativos.",
-    },
-    {
-      speaker: "player",
-      text: "¡A brillar con estilos!",
-    },
   ],
 };
 
