@@ -1,16 +1,32 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; //
 import TrainerPose1 from "../assets/img/TrainerPose1.webp";
-import dialogues from "../data/Dialogue";
+import lessonIntroDialogues  from "../data/Dialogue";
+import trainingDialogues from "../data/Training";
 import { useGame } from "../context/GameContext"; // Game context
+
+const getDialoguesByPhase = (phase) => {
+  switch (phase) {
+    case "LessonIntro":
+      return lessonIntroDialogues;
+    case "Training":
+      return trainingDialogues;
+    case "MatchPresentation":
+      return matchPresentationDialogues;
+    default:
+      return [];
+  }
+};
 
 const DialogueBox = ({ level = 1, currentPhase }) => {
   const { currentLevel } = useGame();
   const [index, setIndex] = useState(0);
-  const currentDialogue = dialogues[level];
-  const navigate = useNavigate(); // Route change hook
+  const navigate = useNavigate();
 
-  if (!currentDialogue) return <p>No hay diálogos para esta lección.</p>;
+  const dialogueData = getDialoguesByPhase(currentPhase);
+  const currentDialogue = dialogueData[level];
+
+  if (!currentDialogue) return <p>No hay diálogos para esta fase.</p>;
 
   const { speaker, text } = currentDialogue[index];
 
@@ -21,6 +37,7 @@ const DialogueBox = ({ level = 1, currentPhase }) => {
       console.log("Fin del diálogo");
     }
   };
+
 
   const handleFinishLevel = () => {
     //Navigation between phases
