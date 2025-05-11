@@ -9,10 +9,13 @@ import TrainingPoint from "../ui/TrainingPoint";
 import Clock from "../ui/Clock";
 import Preview from "../ui/Preview";
 import Editor from "../ui/Editor";
+//exercises and evaluate Answer
+import exercises from "../data/exercises";
+import evaluateAnswer from "../utils/evaluateAnswer";
 
 const defaultCode = `
-<div class="p-4 bg-blue-500 text-white rounded-lg">
-  Editor de código con Tailwind!
+<div class="">
+  Hola Tailwind!
 </div>
 `;
 
@@ -21,6 +24,10 @@ const Training = () => {
   const [showEditor, setShowEditor] = useState(false);
   const [lastTrainerText, setLastTrainerText] = useState(""); // View exercise button
   const [showExplanation, setShowExplanation] = useState(false); // Request explanation
+
+  //exercises and evaluate Answer
+  const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
+  const currentExercise = exercises[currentExerciseIndex];
 
   //Resize screens in width, preview screen and editor screen
   const [previewWidth, setPreviewWidth] = useState(400); // start width
@@ -92,20 +99,57 @@ const Training = () => {
 
           {showEditor && (
             <>
+              <div className="relative">
+                <Clock />
+              </div>
+
               <div className="z-20 flex flex-col justify-center w-full h-full max-w-4xl gap-2 ">
-                <button
-                  className="max-w-[20rem] p-2 font-bold text-white bg-yellow-600 rounded  hover:bg-yellow-700"
-                  onClick={() => setShowExplanation(!showExplanation)}
-                >
-                  {showExplanation
-                    ? "Ocultar explicación"
-                    : "Pedir explicaciones"}
-                </button>
+                <div className="flex flex-row w-full">
+                  <button
+                    className="max-w-[20rem] p-2 font-bold text-white bg-yellow-600 rounded  hover:bg-yellow-700"
+                    onClick={() => setShowExplanation(!showExplanation)}
+                  >
+                    {showExplanation
+                      ? "Ocultar explicación"
+                      : "Pedir explicaciones"}
+                  </button>
+
+                  <button
+                    className="max-w-[20rem] p-2 font-bold text-white bg-sky-600 rounded  hover:bg-sky-700"
+                    onClick={() => {
+                      const isCorrect = evaluateAnswer(code, currentExercise);
+
+                      //Function to verify exercise as player response
+                      if (isCorrect) {
+                        alert(
+                          "¡Golazo! 🎯 ¡Has dominado la técnica! Sigue así y anotarás más goles. ¡Vamos por el siguiente ejercicio! ⚽"
+                        );
+
+                        if (currentExerciseIndex < exercises.length - 1) {
+                          // next exercise
+                          setCurrentExerciseIndex((prev) => prev + 1);
+                          setCode(defaultCode); // The code is reset when moving to the next exercise
+                        } else {
+                          // SWhen the exercises are finished, the coach congratulates you and you move on to the next phase of the game, which is the actual match.
+                          alert(
+                            "¡Bien! 🏆 ¡Has completado todos los ejercicios y dominado las técnicas! Ahora prepárate para el partido real. ¡A ganar! ⚽"
+                          );
+                        }
+                      } else {
+                        alert(
+                          "¡Casi! ❌ No te preocupes, sigue practicando. Recuerda, la técnica es clave. Vuelve a revisar y corrige el error. ¡La próxima vez será gol! ⚽"
+                        );
+                      }
+                    }}
+                  >
+                    Verificar respuesta
+                  </button>
+                </div>
 
                 {showExplanation && (
                   <div className="w-full max-w-xl p-4 mt-2 text-black bg-white rounded-lg shadow-xl max-h-32">
                     <strong>Entrenador dice:</strong>
-                    <p>{lastTrainerText}</p>
+                    <p>{currentExercise.prompt}</p>
                   </div>
                 )}
                 <Editor code={code} setCode={setCode} />

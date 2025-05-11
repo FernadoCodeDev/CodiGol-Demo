@@ -1,4 +1,4 @@
-//Lessons with dialogues, exercises, etc
+//Lessons with dialogues
 const Training = {
   1: [
     {
@@ -19,7 +19,7 @@ const Training = {
     },
     {
       speaker: "trainer",
-      text: "Haz que el texto tenga tamaño de 12px, y al llegar a sm debe tener 48px, ser de color blanco y estar en negrita.",
+      text: "Haz que el texto tenga un tamaño de 12px, y al llegar a sm debe tener 48px, El texto debe ser de color blanco y estar en negrita.",
     },
   ],
 

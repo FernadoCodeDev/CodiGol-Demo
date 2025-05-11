@@ -4,8 +4,8 @@ import Editor from "./Editor";
 import Preview from "./Preview";
 
 const defaultCode = `
-<div class="p-4 bg-blue-500 text-white rounded-lg">
-  Editor de código con Tailwind!
+<div class="">
+  Hola Tailwind!
 </div>
 `;
 
