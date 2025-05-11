@@ -1,1 +1,1 @@
-//Rival information by lesson
+//Table of possible outcomes (lose, draw, win)
