@@ -1,10 +1,13 @@
 //Banking scene before the change
 import React, { useRef } from "react";
+import { useState } from "react";
 import BankingFund from "../assets/img/BankingFund.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
 
 const SubBench = () => {
+  const [level, setLevel] = useState(1);
+
   return (
     <div className="relative w-full min-h-screen">
       <div
@@ -22,7 +25,7 @@ const SubBench = () => {
             Lección 4: BankingFund
           </h1>
 
-          <DialogueBox />
+           <DialogueBox level={level} currentPhase="SubBench"/>
         </div>
       </div>
     </div>

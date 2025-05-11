@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"; //
 import TrainerPose1 from "../assets/img/TrainerPose1.webp";
 import lessonIntroDialogues from "../data/Dialogue";
 import trainingDialogues from "../data/Training";
+import SubBenchDialogues from "../data/SubBench"
 import { useGame } from "../context/GameContext"; // Game context
 
 const getDialoguesByPhase = (phase) => {
@@ -12,8 +13,8 @@ const getDialoguesByPhase = (phase) => {
       return lessonIntroDialogues;
     case "Training":
       return trainingDialogues;
-    case "MatchPresentation":
-      return matchPresentationDialogues;
+    case "SubBench":
+      return SubBenchDialogues;
     default:
       return [];
   }
