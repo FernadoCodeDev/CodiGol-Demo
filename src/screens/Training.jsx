@@ -20,7 +20,35 @@ const Training = () => {
   const [code, setCode] = useState(defaultCode);
   const [showEditor, setShowEditor] = useState(false);
   const [lastTrainerText, setLastTrainerText] = useState(""); // View exercise button
-  const [showExplanation, setShowExplanation] = useState(false); // Request explanation 
+  const [showExplanation, setShowExplanation] = useState(false); // Request explanation
+
+  const [previewWidth, setPreviewWidth] = useState(400); // ancho inicial en px
+
+  const resizerRef = useRef(null);
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setPreviewWidth(e.clientX);
+    };
+
+    const stopResize = () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", stopResize);
+    };
+
+    const startResize = () => {
+      window.addEventListener("mousemove", handleMouseMove);
+      window.addEventListener("mouseup", stopResize);
+    };
+
+    const resizer = resizerRef.current;
+    if (resizer) {
+      resizer.addEventListener("mousedown", startResize);
+    }
+
+    return () => {
+      if (resizer) resizer.removeEventListener("mousedown", startResize);
+    };
+  }, []);
 
   return (
     <div className="relative w-full min-h-screen">
@@ -29,16 +57,31 @@ const Training = () => {
         style={{ backgroundImage: `url(${trainingFund})` }}
       ></div>
 
-      <Navigation />
+      <div className="flex h-screen gap-4 mt-32">
+    
 
-      <div className="grid items-center justify-center grid-cols-4 ">
-        <div className="relative h-[85%] mt-32 ">
+        <div
+          style={{ width: previewWidth }}
+          className="relative h-[85%] mt-32 "
+        >
           <Preview code={code} setCode={setCode} />
         </div>
 
-        <div className="relative flex flex-col items-center justify-center min-h-screen col-span-3">
-          <div className="absolute bottom-0 w-full">
+        
+        <div
+          style={{ width: previewWidth }}
+          className="absolute "
+        >
+          <Navigation />
+        </div>
 
+        <div
+          ref={resizerRef}
+          className="relative w-2 bg-yellow-500 cursor-col-resize hover:bg-yellow-700"
+        ></div>
+
+        <div className="relative flex flex-col justify-end flex-1 min-h-screen">
+          <div className="bottom-0 w-full ">
             {/* Scene sequence: coach's dialogue, exercise */}
             {!showEditor && (
               <DialogueBox
@@ -54,9 +97,9 @@ const Training = () => {
 
           {showEditor && (
             <>
-              <div className="z-20 flex flex-col items-end w-full h-full max-w-4xl mb-4">
+              <div className="z-20 flex flex-col justify-center w-full h-full max-w-4xl gap-2 ">
                 <button
-                  className=" max-w-[20rem] p-2 font-bold text-white bg-yellow-600 rounded  hover:bg-yellow-700"
+                  className="max-w-[20rem] p-2 font-bold text-white bg-yellow-600 rounded  hover:bg-yellow-700"
                   onClick={() => setShowExplanation(!showExplanation)}
                 >
                   {showExplanation
@@ -70,8 +113,8 @@ const Training = () => {
                     <p>{lastTrainerText}</p>
                   </div>
                 )}
+                <Editor code={code} setCode={setCode} />
               </div>
-              <Editor code={code} setCode={setCode} />
             </>
           )}
         </div>

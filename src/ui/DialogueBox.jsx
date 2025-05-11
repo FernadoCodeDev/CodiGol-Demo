@@ -61,7 +61,7 @@ const DialogueBox = ({ level = 1, currentPhase, onFinishDialog }) => {
   const isTrainer = speaker === "trainer";
 
   return (
-    <div className="flex items-end justify-center max-w-7xl">
+    <div className="flex items-end justify-end max-w-7xl">
       {isTrainer && (
         <img
           src={TrainerPose1}

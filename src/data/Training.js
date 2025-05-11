@@ -19,7 +19,7 @@ const Training = {
     },
     {
       speaker: "trainer",
-      text: "Dialogo",
+      text: "Haz que el texto tenga tamaño de 12px, y al llegar a sm debe tener 48px, ser de color blanco y estar en negrita.",
     },
   ],
 
