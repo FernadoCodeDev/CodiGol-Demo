@@ -48,15 +48,11 @@ const MatchPresentation = () => {
               <h1 className="text-4xl font-bold text-center">Gem Rubies</h1>
             </div>
 
-              <button
-            //onClick={handleNext}
-            className="col-start-3 px-4 py-2 m-4 font-semibold text-white bg-blue-700 rounded hover:bg-blue-800"
-          >
-            Siguiente
-          </button>
-          </div>
+            <button className="col-start-3 px-4 py-2 m-4 font-semibold text-white bg-blue-700 rounded hover:bg-blue-800">
+              Siguiente
+            </button>
 
-        
+          </div>
         </div>
       </div>
     </div>

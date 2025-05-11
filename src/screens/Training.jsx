@@ -13,6 +13,10 @@ import Editor from "../ui/Editor";
 import exercises from "../data/exercises";
 import evaluateAnswer from "../utils/evaluateAnswer";
 
+//At the end of the exercises it will take you to MatchPresentation
+import { useNavigate } from "react-router-dom";
+import { navigateToNextPhase } from "../utils/navigateToNextPhase";
+
 const defaultCode = `
 <div class="">
   Hola Tailwind!
@@ -58,6 +62,12 @@ const Training = () => {
     };
   }, []);
 
+  const navigate = useNavigate();
+  const handleFinishLevel = () => {
+  navigateToNextPhase("Training", navigate);
+};
+
+
   return (
     <div className="relative w-full min-h-screen">
       <div
@@ -65,7 +75,7 @@ const Training = () => {
         style={{ backgroundImage: `url(${trainingFund})` }}
       ></div>
 
-      <div className="flex h-screen gap-4 mt-32">
+      <div className="flex h-screen gap-4 ">
         <div
           style={{ width: previewWidth }}
           className="relative h-[85%] mt-32 "
@@ -99,10 +109,6 @@ const Training = () => {
 
           {showEditor && (
             <>
-              <div className="relative">
-                <Clock />
-              </div>
-
               <div className="z-20 flex flex-col justify-center w-full h-full max-w-4xl gap-2 ">
                 <div className="flex flex-row w-full">
                   <button
@@ -134,6 +140,8 @@ const Training = () => {
                           alert(
                             "¡Bien! 🏆 ¡Has completado todos los ejercicios y dominado las técnicas! Ahora prepárate para el partido real. ¡A ganar! ⚽"
                           );
+
+                          handleFinishLevel(); //directional button to other phases
                         }
                       } else {
                         alert(
