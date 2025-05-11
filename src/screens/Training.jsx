@@ -1,4 +1,5 @@
 //Practical training
+//Dialogues and exercise
 import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import trainingFund from "../assets/img/ExerciseFund.webp";
@@ -17,6 +18,10 @@ const defaultCode = `
 
 const Training = () => {
   const [code, setCode] = useState(defaultCode);
+  const [showEditor, setShowEditor] = useState(false);
+  const [lastTrainerText, setLastTrainerText] = useState(""); // View exercise button
+  const [showExplanation, setShowExplanation] = useState(false); // Request explanation 
+
   return (
     <div className="relative w-full min-h-screen">
       <div
@@ -31,18 +36,44 @@ const Training = () => {
           <Preview code={code} setCode={setCode} />
         </div>
 
-        <div className="relative grid min-h-screen grid-cols-1 col-span-3">
-          <h1 className="text-5xl font-bold text-black md:text-6xl drop-shadow-lg">
-            Lección 2: Entrenamiento práctico
-          </h1>
+        <div className="relative flex flex-col items-center justify-center min-h-screen col-span-3">
+          <div className="absolute bottom-0 w-full">
 
-          <Clock />
+            {/* Scene sequence: coach's dialogue, exercise */}
+            {!showEditor && (
+              <DialogueBox
+                level={1}
+                currentPhase="Training"
+                onFinishDialog={(lastText) => {
+                  setShowEditor(true); // Show editor when dialog ends
+                  setLastTrainerText(lastText); // Last dialogue for the request explanation button
+                }}
+              />
+            )}
+          </div>
 
-          {/* <TrainingPoint /> */}
+          {showEditor && (
+            <>
+              <div className="z-20 flex flex-col items-end w-full h-full max-w-4xl mb-4">
+                <button
+                  className=" max-w-[20rem] p-2 font-bold text-white bg-yellow-600 rounded  hover:bg-yellow-700"
+                  onClick={() => setShowExplanation(!showExplanation)}
+                >
+                  {showExplanation
+                    ? "Ocultar explicación"
+                    : "Pedir explicaciones"}
+                </button>
 
-          <DialogueBox level={1} currentPhase="Training" />
-
-          <Editor code={code} setCode={setCode} />
+                {showExplanation && (
+                  <div className="w-full max-w-xl p-4 mt-2 text-black bg-white rounded-lg shadow-xl max-h-32">
+                    <strong>Entrenador dice:</strong>
+                    <p>{lastTrainerText}</p>
+                  </div>
+                )}
+              </div>
+              <Editor code={code} setCode={setCode} />
+            </>
+          )}
         </div>
       </div>
     </div>

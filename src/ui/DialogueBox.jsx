@@ -1,7 +1,8 @@
+//DialogueBox
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; //
 import TrainerPose1 from "../assets/img/TrainerPose1.webp";
-import lessonIntroDialogues  from "../data/Dialogue";
+import lessonIntroDialogues from "../data/Dialogue";
 import trainingDialogues from "../data/Training";
 import { useGame } from "../context/GameContext"; // Game context
 
@@ -18,7 +19,7 @@ const getDialoguesByPhase = (phase) => {
   }
 };
 
-const DialogueBox = ({ level = 1, currentPhase }) => {
+const DialogueBox = ({ level = 1, currentPhase, onFinishDialog }) => {
   const { currentLevel } = useGame();
   const [index, setIndex] = useState(0);
   const navigate = useNavigate();
@@ -37,7 +38,6 @@ const DialogueBox = ({ level = 1, currentPhase }) => {
       console.log("Fin del diálogo");
     }
   };
-
 
   const handleFinishLevel = () => {
     //Navigation between phases
@@ -70,7 +70,7 @@ const DialogueBox = ({ level = 1, currentPhase }) => {
         />
       )}
 
-      <div className="flex-1 max-w-4xl p-6 mb-4 mr-4 text-lg text-black bg-white rounded-lg shadow-xl bg-opacity-80 md:text-xl">
+      <div className="flex-1 w-full max-w-4xl p-6 mb-4 mr-4 text-lg text-black bg-white rounded-lg shadow-xl bg-opacity-80 md:text-xl">
         <p>{text}</p>
         {index < currentDialogue.length - 1 ? (
           <button
@@ -81,7 +81,13 @@ const DialogueBox = ({ level = 1, currentPhase }) => {
           </button>
         ) : (
           <button
-            onClick={handleFinishLevel}
+            onClick={() => {
+              if (onFinishDialog) {
+                onFinishDialog(text); // have the last dialogue as an explanation for the exercise
+              } else {
+                handleFinishLevel(); //directional button to other phases
+              }
+            }}
             className="px-4 py-2 mt-4 font-semibold text-white bg-green-700 rounded hover:bg-green-800"
           >
             Continuar
