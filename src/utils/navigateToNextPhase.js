@@ -1,4 +1,3 @@
-// utils/navigateToNextPhase.js
 export const navigateToNextPhase = (currentPhase, navigate) => {
   const routes = {
     LessonIntro: "/Training",
@@ -13,3 +12,6 @@ export const navigateToNextPhase = (currentPhase, navigate) => {
   const nextRoute = routes[currentPhase];
   if (nextRoute) navigate(nextRoute);
 };
+
+//At the end of training he heads 
+// to Match Presentation
