@@ -22,7 +22,8 @@ const Training = () => {
   const [lastTrainerText, setLastTrainerText] = useState(""); // View exercise button
   const [showExplanation, setShowExplanation] = useState(false); // Request explanation
 
-  const [previewWidth, setPreviewWidth] = useState(400); // ancho inicial en px
+  //Resize screens in width, preview screen and editor screen
+  const [previewWidth, setPreviewWidth] = useState(400); // start width
 
   const resizerRef = useRef(null);
   useEffect(() => {
@@ -58,8 +59,6 @@ const Training = () => {
       ></div>
 
       <div className="flex h-screen gap-4 mt-32">
-    
-
         <div
           style={{ width: previewWidth }}
           className="relative h-[85%] mt-32 "
@@ -67,11 +66,7 @@ const Training = () => {
           <Preview code={code} setCode={setCode} />
         </div>
 
-        
-        <div
-          style={{ width: previewWidth }}
-          className="absolute "
-        >
+        <div style={{ width: previewWidth }} className="absolute ">
           <Navigation />
         </div>
 
