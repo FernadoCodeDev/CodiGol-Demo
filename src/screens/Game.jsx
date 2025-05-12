@@ -7,9 +7,11 @@ import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
 import TrainingPoint from "../ui/TrainingPoint";
 import RivalGoalkeeper from "../assets/img/RivalGoalkeeper.webp";
-import Clock from "../ui/Clock";
 import Preview from "../ui/Preview";
 import Editor from "../ui/Editor";
+import Scoreboard from "../ui/Scoreboard";
+import Timer from "../ui/Timer";
+
 //exercises and evaluate Answer
 import exercises from "../data/exercises";
 import evaluateAnswer from "../utils/evaluateAnswer";
@@ -113,7 +115,9 @@ const Training = () => {
             className="absolute object-contain w-80 top-1/4 right-1/2"
           />
 
-            <Clock className="absolute"/>
+            <Scoreboard className="absolute"/>
+
+            <Timer className="absolute"/>
    
 
           {showEditor && (
