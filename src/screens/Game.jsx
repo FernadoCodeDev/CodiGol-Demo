@@ -99,22 +99,13 @@ const Game = () => {
   };
 
   //ScoreBoard
-  //console.log("MatchData:", MatchData);
-  const currentMatchData = MatchData.find((match) => match.level === 1);
-
-  const [playerGoals, setPlayerGoals] = useState(
-    currentMatchData ? currentMatchData.playerTeam.score : 0
-  );
-  const [rivalGoals] = useState(
-    currentMatchData ? currentMatchData.rivalTeam.score : 0
-  );
+  const [playerGoals, setPlayerGoals] = useState(MatchData.playerTeam.score);
+  const [rivalGoals] = useState(MatchData.rivalTeam.score);
+  const [exerciseIndex, setExerciseIndex] = useState(0);
 
   const handleCorrectAnswer = () => {
     setPlayerGoals((prev) => prev + 1);
-
-    if (currentExerciseIndex < 4) {
-      setCurrentExerciseIndex((prev) => prev + 1);
-    }
+    if (exerciseIndex < 4) setExerciseIndex((prev) => prev + 1);
   };
 
   return (
@@ -188,17 +179,12 @@ const Game = () => {
                       //Function to verify exercise as player response
                       if (isCorrect) {
                         alert("¡Golazo! 🎯 Haz anotado un ¡Golazo!⚽");
-
-                        if (currentExerciseIndex < GameData.length - 1) {
-                          // next exercise
-                          setCurrentExerciseIndex((prev) => prev + 1);
-                        } else {
-                          handleFinishLevel(); //directional button to other phases
-                        }
+                        handleCorrectAnswer();
                       } else {
                         alert(
                           "¡Casi! ❌ Haz fallado el tiro ¡La próxima vez será gol! ⚽"
                         );
+                        nextExercise();
                       }
 
                       nextExercise();
