@@ -1,17 +1,13 @@
-//Final result of the match
-import React, { useRef } from "react";
-import { useGame } from "../context/GameContext";
+import React from "react";
+import { useGame } from "../context/GameContext"; 
 import Background from "../assets/img/Background.webp";
 import Navigation from "../ui/Navigation";
-import WindJaguars from "../assets/img/WindJaguars.webp";
-import GemRubies from "../assets/img/GemRubies.webp";
 
 const FinalScore = () => {
-
-  const { nextLevel } = useGame();
+  const { playerGoals, rivalGoals, playerTeam, rivalTeam, nextLevel } = useGame();
 
   const handleContinue = () => {
-    nextLevel(); 
+    nextLevel();
   };
 
   return (
@@ -21,7 +17,7 @@ const FinalScore = () => {
         style={{ backgroundImage: `url(${Background})` }}
       ></div>
 
-      <div className="grid items-center justify-center grid-cols-5 gr ">
+      <div className="grid items-center justify-center grid-cols-5">
         <div className="relative z-20 h-full ">
           <Navigation />
         </div>
@@ -32,28 +28,34 @@ const FinalScore = () => {
           </h1>
 
           <h1 className="mt-4 text-5xl font-bold md:text-6xl drop-shadow-lg">
-            30:00
+            90:00
           </h1>
 
           <div className="grid grid-cols-3 m-auto max-w-[60rem]">
             <div className="flex flex-col items-center justify-center gap-2 text-white">
               <img
-                src={WindJaguars}
-                alt="WindJaguars"
+                src={playerTeam.logo}
+                alt={playerTeam.name}
                 className="w-full h-auto"
               />
               <div className="w-full h-2 bg-white"></div>
-              <h1 className="text-4xl font-bold text-center">Wind Jaguars</h1>
+              <h1 className="text-4xl font-bold text-center">{playerTeam.name}</h1>
             </div>
 
             <div className="flex flex-col items-center justify-center gap-2 text-white">
-              <h1 className="font-bold text-center text-7xl">04 - 03</h1>
+              <h1 className="font-bold text-center text-7xl">
+                {playerGoals} - {rivalGoals}
+              </h1>
             </div>
 
             <div className="flex flex-col items-center justify-center gap-2 text-white">
-              <img src={GemRubies} alt="GemRubies" className="w-full h-auto" />
+              <img
+                src={rivalTeam.logo}
+                alt={rivalTeam.name}
+                className="w-full h-auto"
+              />
               <div className="w-full h-2 bg-white"></div>
-              <h1 className="text-4xl font-bold text-center">Gem Rubies</h1>
+              <h1 className="text-4xl font-bold text-center">{rivalTeam.name}</h1>
             </div>
 
             <button

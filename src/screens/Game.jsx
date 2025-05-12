@@ -2,6 +2,7 @@
 //Dialogues and exercise
 import React, { useRef } from "react";
 import { useEffect, useState } from "react";
+
 import TestFund from "../assets/img/TestFund.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
@@ -20,6 +21,8 @@ import Scoreboard from "../ui/Scoreboard";
 //At the end of the GameData it will take you to MatchPresentation
 import { useNavigate } from "react-router-dom";
 import { navigateToNextPhase } from "../utils/navigateToNextPhase";
+
+import { useGame } from "../context/GameContext"; // Recopilar resultado del partido
 
 const defaultCode = `
 <div class="">
@@ -103,10 +106,14 @@ const Game = () => {
   const [rivalGoals] = useState(MatchData.rivalTeam.score);
   const [exerciseIndex, setExerciseIndex] = useState(0);
 
+  const { updatePlayerGoals } = useGame(); 
+
   const handleCorrectAnswer = () => {
+    updatePlayerGoals();
     setPlayerGoals((prev) => prev + 1);
     if (exerciseIndex < 4) setExerciseIndex((prev) => prev + 1);
   };
+
 
   return (
     <div className="relative w-full min-h-screen">
