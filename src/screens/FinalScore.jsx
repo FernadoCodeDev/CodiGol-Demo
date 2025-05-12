@@ -1,14 +1,23 @@
-import React from "react";
-import { useGame } from "../context/GameContext"; 
+import React, { useEffect } from "react";
+import { useGame } from "../context/GameContext";
 import Background from "../assets/img/Background.webp";
 import Navigation from "../ui/Navigation";
+import { useNavigate } from "react-router-dom";
+import { navigateToNextPhase } from "../utils/navigateToNextPhase";
 
 const FinalScore = () => {
-  const { playerGoals, rivalGoals, playerTeam, rivalTeam, nextLevel } = useGame();
+  const { playerGoals, rivalGoals, playerTeam, rivalTeam, nextLevel } =
+    useGame();
 
-  const handleContinue = () => {
-    nextLevel();
-  };
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      navigateToNextPhase("FinalScore", navigate);
+    }, 15000);
+
+    return () => clearTimeout(timeout);
+  }, [navigate]);
 
   return (
     <div className="relative w-full min-h-screen">
@@ -39,7 +48,9 @@ const FinalScore = () => {
                 className="w-full h-auto"
               />
               <div className="w-full h-2 bg-white"></div>
-              <h1 className="text-4xl font-bold text-center">{playerTeam.name}</h1>
+              <h1 className="text-4xl font-bold text-center">
+                {playerTeam.name}
+              </h1>
             </div>
 
             <div className="flex flex-col items-center justify-center gap-2 text-white">
@@ -55,15 +66,10 @@ const FinalScore = () => {
                 className="w-full h-auto"
               />
               <div className="w-full h-2 bg-white"></div>
-              <h1 className="text-4xl font-bold text-center">{rivalTeam.name}</h1>
+              <h1 className="text-4xl font-bold text-center">
+                {rivalTeam.name}
+              </h1>
             </div>
-
-            <button
-              onClick={handleContinue}
-              className="col-start-3 px-4 py-2 m-4 font-semibold text-white bg-blue-700 rounded hover:bg-blue-800"
-            >
-              Siguiente
-            </button>
           </div>
         </div>
       </div>
