@@ -5,18 +5,19 @@ import { useEffect, useState } from "react";
 import TestFund from "../assets/img/TestFund.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
-import TrainingPoint from "../ui/TrainingPoint";
 import RivalGoalkeeper from "../assets/img/RivalGoalkeeper.webp";
 import Preview from "../ui/Preview";
 import Editor from "../ui/Editor";
-import Scoreboard from "../ui/Scoreboard";
+//GameData and evaluate Answer
+import GameData from "../data/Game";
+import evaluateAnswer from "../utils/evaluateAnswer";
 import Timer from "../ui/Timer";
 
-//exercises and evaluate Answer
-import exercises from "../data/exercises";
-import evaluateAnswer from "../utils/evaluateAnswer";
+//ScoreBoard
+import MatchData from "../data/MatchData";
+import Scoreboard from "../ui/Scoreboard";
 
-//At the end of the exercises it will take you to MatchPresentation
+//At the end of the GameData it will take you to MatchPresentation
 import { useNavigate } from "react-router-dom";
 import { navigateToNextPhase } from "../utils/navigateToNextPhase";
 
@@ -26,15 +27,15 @@ const defaultCode = `
 </div>
 `;
 
-const Training = () => {
+const Game = () => {
   const [code, setCode] = useState(defaultCode);
   const [showEditor, setShowEditor] = useState(false);
   const [lastTrainerText, setLastTrainerText] = useState(""); // View exercise button
   const [showExplanation, setShowExplanation] = useState(false); // Request explanation
 
-  //exercises and evaluate Answer
+  //GameData and evaluate Answer
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
-  const currentExercise = exercises[currentExerciseIndex];
+  const currentExercise = GameData[currentExerciseIndex];
 
   //Resize screens in width, preview screen and editor screen
   const [previewWidth, setPreviewWidth] = useState(400); // start width
@@ -60,14 +61,60 @@ const Training = () => {
       resizer.addEventListener("mousedown", startResize);
     }
 
+    // Mostrar el editor directamente al cargar el componente del partido
+    setShowEditor(true);
+
     return () => {
       if (resizer) resizer.removeEventListener("mousedown", startResize);
     };
   }, []);
 
+  //Next Phase
   const navigate = useNavigate();
   const handleFinishLevel = () => {
-    navigateToNextPhase("Training", navigate);
+    navigateToNextPhase("Game", navigate);
+  };
+
+  //If the player runs out of time or makes a mistake in his answer, then we move
+  // on to the next exercise called the function that indicates that time has run
+  // out or that he has made a mistake.
+
+  const [timerResetKey, setTimerResetKey] = useState(0);
+
+  const nextExercise = () => {
+    if (currentExerciseIndex < GameData.length - 1) {
+      setCurrentExerciseIndex((prev) => prev + 1);
+      setCode(defaultCode);
+      setTimerResetKey((prev) => prev + 1);
+      //In both cases, whether the exercise is good or bad,
+      // the timer is reset.
+    } else {
+      handleFinishLevel();
+    }
+  };
+
+  const handleTimeOut = () => {
+    alert("⏱️ Se te acabó el tiempo. ¡Fallaste el tiro! ⚽❌");
+    nextExercise();
+  };
+
+  //ScoreBoard
+  //console.log("MatchData:", MatchData);
+  const currentMatchData = MatchData.find((match) => match.level === 1);
+
+  const [playerGoals, setPlayerGoals] = useState(
+    currentMatchData ? currentMatchData.playerTeam.score : 0
+  );
+  const [rivalGoals] = useState(
+    currentMatchData ? currentMatchData.rivalTeam.score : 0
+  );
+
+  const handleCorrectAnswer = () => {
+    setPlayerGoals((prev) => prev + 1);
+
+    if (currentExerciseIndex < 4) {
+      setCurrentExerciseIndex((prev) => prev + 1);
+    }
   };
 
   return (
@@ -97,16 +144,6 @@ const Training = () => {
         <div className="relative flex flex-col justify-end flex-1 min-h-screen">
           <div className="bottom-0 w-full ">
             {/* Scene sequence: coach's dialogue, exercise */}
-            {!showEditor && (
-              <DialogueBox
-                level={1}
-                currentPhase="Training"
-                onFinishDialog={(lastText) => {
-                  setShowEditor(true); // Show editor when dialog ends
-                  setLastTrainerText(lastText); // Last dialogue for the request explanation button
-                }}
-              />
-            )}
           </div>
 
           <img
@@ -115,10 +152,20 @@ const Training = () => {
             className="absolute object-contain w-80 top-1/4 right-1/2"
           />
 
-            <Scoreboard className="absolute"/>
+          <Scoreboard
+            className="absolute"
+            playerTeam={MatchData.playerTeam}
+            rivalTeam={MatchData.rivalTeam}
+            playerGoals={playerGoals}
+            rivalGoals={rivalGoals}
+            currentMinute={MatchData.matchMinutes[exerciseIndex]}
+          />
 
-            <Timer className="absolute"/>
-   
+          <Timer
+            className="absolute"
+            onTimeOut={handleTimeOut}
+            resetTrigger={timerResetKey}
+          />
 
           {showEditor && (
             <>
@@ -129,8 +176,8 @@ const Training = () => {
                     onClick={() => setShowExplanation(!showExplanation)}
                   >
                     {showExplanation
-                      ? "Ocultar explicación"
-                      : "Pedir explicaciones"}
+                      ? "Ocultar Ejercicio"
+                      : "Mostrar Ejercicio"}
                   </button>
 
                   <button
@@ -140,27 +187,21 @@ const Training = () => {
 
                       //Function to verify exercise as player response
                       if (isCorrect) {
-                        alert(
-                          "¡Golazo! 🎯 ¡Has dominado la técnica! Sigue así y anotarás más goles. ¡Vamos por el siguiente ejercicio! ⚽"
-                        );
+                        alert("¡Golazo! 🎯 Haz anotado un ¡Golazo!⚽");
 
-                        if (currentExerciseIndex < exercises.length - 1) {
+                        if (currentExerciseIndex < GameData.length - 1) {
                           // next exercise
                           setCurrentExerciseIndex((prev) => prev + 1);
-                          setCode(defaultCode); // The code is reset when moving to the next exercise
                         } else {
-                          // SWhen the exercises are finished, the coach congratulates you and you move on to the next phase of the game, which is the actual match.
-                          alert(
-                            "¡Bien! 🏆 ¡Has completado todos los ejercicios y dominado las técnicas! Ahora prepárate para el partido real. ¡A ganar! ⚽"
-                          );
-
                           handleFinishLevel(); //directional button to other phases
                         }
                       } else {
                         alert(
-                          "¡Casi! ❌ No te preocupes, sigue practicando. Recuerda, la técnica es clave. Vuelve a revisar y corrige el error. ¡La próxima vez será gol! ⚽"
+                          "¡Casi! ❌ Haz fallado el tiro ¡La próxima vez será gol! ⚽"
                         );
                       }
+
+                      nextExercise();
                     }}
                   >
                     Verificar respuesta
@@ -168,8 +209,8 @@ const Training = () => {
                 </div>
 
                 {showExplanation && (
-                  <div className="w-full max-w-xl p-4 mt-2 text-black bg-white rounded-lg shadow-xl max-h-32">
-                    <strong>Entrenador dice:</strong>
+                  <div className="w-full max-w-xl p-4 mt-2 text-black bg-white rounded-lg shadow-xl max-h-40">
+                    <strong>Para anotar:</strong>
                     <p>{currentExercise.prompt}</p>
                   </div>
                 )}
@@ -183,4 +224,4 @@ const Training = () => {
   );
 };
 
-export default Training;
+export default Game;

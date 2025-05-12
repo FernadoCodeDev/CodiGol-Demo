@@ -40,7 +40,7 @@ const MatchPresentation = () => {
         <div className="relative flex flex-col min-h-screen col-span-4 text-center text-white">
           <h1 className="text-6xl font-bold drop-shadow-lg">Liga Full Stack</h1>
 
-          <h1 className="mt-4 text-5xl font-bold drop-shadow-lg">30:00</h1>
+          <h1 className="mt-4 text-5xl font-bold drop-shadow-lg">45:00</h1>
 
           <div className="grid grid-cols-3 m-auto max-w-[60rem]">
             <div className="flex flex-col items-center justify-center gap-2 text-white">

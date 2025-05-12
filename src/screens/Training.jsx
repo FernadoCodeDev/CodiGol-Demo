@@ -6,7 +6,6 @@ import trainingFund from "../assets/img/ExerciseFund.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
 import TrainingPoint from "../ui/TrainingPoint";
-import Clock from "../ui/Clock";
 import Preview from "../ui/Preview";
 import Editor from "../ui/Editor";
 //exercises and evaluate Answer
