@@ -4,7 +4,7 @@ import Editor from "./Editor";
 import Preview from "./Preview";
 
 const defaultCode = `
-<div class="">
+<div class="text-xs sm:text-base md:text-2xl lg:text-5xl xl:text-8xl 2xl:text-9xl">
   Hola Tailwind!
 </div>
 `;

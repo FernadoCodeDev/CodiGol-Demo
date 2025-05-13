@@ -17,8 +17,8 @@ import { useNavigate } from "react-router-dom";
 import { navigateToNextPhase } from "../utils/navigateToNextPhase";
 
 const defaultCode = `
-<div class="">
-  Hola Tailwind!
+<div class=" text-xs text-white ">
+Hola Tailwind
 </div>
 `;
 
@@ -63,9 +63,8 @@ const Training = () => {
 
   const navigate = useNavigate();
   const handleFinishLevel = () => {
-  navigateToNextPhase("Training", navigate);
-};
-
+    navigateToNextPhase("Training", navigate);
+  };
 
   return (
     <div className="relative w-full min-h-screen">
@@ -154,9 +153,33 @@ const Training = () => {
                 </div>
 
                 {showExplanation && (
-                  <div className="w-full max-w-xl p-4 mt-2 text-black bg-white rounded-lg shadow-xl max-h-32">
+                  <div className="w-full h-auto max-w-xl p-4 mt-2 text-black bg-white rounded-lg shadow-xl">
                     <strong>Entrenador dice:</strong>
                     <p>{currentExercise.prompt}</p>
+
+                    <strong>Recuerda:</strong>
+
+                    <div className="grid grid-cols-4 gap-4 text-xs">
+                      <p>text-xs = 12px</p>
+                      <p>text-sm = 14px</p>
+                      <p>text-base = 16px</p>
+                      <p>text-lg = 18px</p>
+                      <p>text-xl = 20px</p>
+                      <p>text-2xl = 24px</p>
+                      <p>text-3xl = 30px</p>
+                      <p>text-4xl = 36px</p>
+                      <p>text-5xl = 48px</p>
+                      <p>text-6xl = 60px</p>
+                      <p>text-7xl = 72px</p>
+                      <p>text-8xl = 96px</p>
+                      <p>text-9xl = 128px</p>
+                      <p>menor a 640 nada</p>
+                      <p>sm desde 640px</p>
+                      <p>md desde 768px</p>
+                      <p>lg desde 1024px</p>
+                      <p>xl desde 1280px</p>
+                      <p>2xl desde 1536px</p>
+                    </div>
                   </div>
                 )}
                 <Editor code={code} setCode={setCode} />

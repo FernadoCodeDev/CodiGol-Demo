@@ -6,8 +6,8 @@ const exercises = [
     id: 1,
     level: 1,
     prompt:
-      "Haz que el texto tenga un tamaño de 12px, y al llegar a sm debe tener 48px, El texto debe ser de color blanco y estar en negrita.",
-    requiredClasses: ["text-xs", "sm:text-5xl", "text-white", "font-bold"],
+      "Haz que el texto tenga un tamaño de 12px, y al llegar a sm debe tener 48px",
+    requiredClasses: ["text-xs", "sm:text-5xl", ],
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const exercises = [
     id: 3,
     level: 1,
     prompt:
-      "El texto debe iniciar en 12px, luego tener 16px en sm, 24px en md, y 60px en 2xl.",
+      "El texto debe iniciar en 12px, luego tener 16px en sm, 24px en md, 60px en 2xl",
     requiredClasses: ["text-xs", "sm:text-base", "md:text-2xl", "2xl:text-6xl"],
   },
 
