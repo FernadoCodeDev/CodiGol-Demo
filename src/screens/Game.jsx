@@ -22,7 +22,7 @@ import Scoreboard from "../ui/Scoreboard";
 import { useNavigate } from "react-router-dom";
 import { navigateToNextPhase } from "../utils/navigateToNextPhase";
 
-import { useGame } from "../context/GameContext"; // Recopilar resultado del partido
+import { useGame } from "../context/GameContext"; // Collect match results
 
 const defaultCode = `
 <div class="">
@@ -102,18 +102,25 @@ const Game = () => {
   };
 
   //ScoreBoard
-  const [playerGoals, setPlayerGoals] = useState(MatchData.playerTeam.score);
+  //const [playerGoals, setPlayerGoals] = useState(MatchData.playerTeam.score);
   const [rivalGoals] = useState(MatchData.rivalTeam.score);
   const [exerciseIndex, setExerciseIndex] = useState(0);
 
-  const { updatePlayerGoals } = useGame(); 
+  const { playerGoals, updatePlayerGoals } = useGame();
 
   const handleCorrectAnswer = () => {
     updatePlayerGoals();
-    setPlayerGoals((prev) => prev + 1);
-    if (exerciseIndex < 4) setExerciseIndex((prev) => prev + 1);
+    // setPlayerGoals((prev) => prev + 1);
+    if (exerciseIndex < 5) setExerciseIndex((prev) => prev + 1);
   };
 
+  //Save the final match result
+
+  const { saveMatchResult } = useGame();
+
+  useEffect(() => {
+    saveMatchResult(); // Save the result after the match ends
+  }, []);
 
   return (
     <div className="relative w-full min-h-screen">

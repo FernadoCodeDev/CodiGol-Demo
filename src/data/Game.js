@@ -41,7 +41,13 @@ const GameData = [
     level: 1,
     prompt:
       "El texto debe tener un tamaño diferente en cada breakpoint: 12px en pantallas menores a 640px, al llegar a 640px un tamaño de 14px, al llegar a 768px un tamaño de 16px, al llegar a 1024px un tamaño de 24px, al llegar a 1280px un tamaño de 36px y al llegar a 1536px un tamaño de 96px",
-    requiredClasses: ["text-xs", "sm:text-sm", "md:text-base", "lg:text-2xl", "xl:text-4xl"],
+    requiredClasses: [
+      "text-xs",
+      "sm:text-sm",
+      "md:text-base",
+      "lg:text-2xl",
+      "xl:text-4xl",
+    ],
   },
 ];
 

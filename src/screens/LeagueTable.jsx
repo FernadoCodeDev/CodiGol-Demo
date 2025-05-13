@@ -13,6 +13,7 @@ import KnightCoders from "../assets/img/KnightCoders.webp";
 import ByteGophers from "../assets/img/ByteGophers.webp";
 import StyleChameleons from "../assets/img/StyleChameleons.webp";
 import WindJaguars from "../assets/img/WindJaguars.webp";
+import { useGame } from "../context/GameContext";
 
 export const teams = [
   { id: 1, name: "Wind Jaguars", logo: WindJaguars },
@@ -28,13 +29,33 @@ export const teams = [
 ];
 
 export const matchResults = [
-  { homeId: 3, awayId: 4, result: "away" }, 
+  { homeId: 3, awayId: 4, result: "away" },
   { homeId: 5, awayId: 6, result: "draw" },
-  { homeId: 7, awayId: 8, result: "home" }, 
+  { homeId: 7, awayId: 8, result: "home" },
   { homeId: 9, awayId: 10, result: "away" },
 ];
 
 const LeagueTable = () => {
+  const { finalResult } = useGame();
+
+  let fullMatchResults = [...matchResults];
+
+  if (finalResult) {
+    const player = teams.find((team) => team.name === "Wind Jaguars");
+    const rival = teams.find((team) => team.name === "Gem Rubies");
+
+    let result;
+    if (finalResult === "win") result = "home";
+    else if (finalResult === "lose") result = "away";
+    else result = "draw";
+
+    fullMatchResults.push({
+      homeId: player.id,
+      awayId: rival.id,
+      result,
+    });
+  }
+
   const calculateTable = (matchResults) => {
     const table = {};
 
@@ -73,7 +94,7 @@ const LeagueTable = () => {
     return table;
   };
 
-  const leagueTable = Object.values(calculateTable(matchResults)).sort(
+  const leagueTable = Object.values(calculateTable(fullMatchResults)).sort(
     (a, b) => b.points - a.points
   );
 
@@ -94,7 +115,6 @@ const LeagueTable = () => {
             Tabla de Resultados
           </h1>
 
-    
           <div className="grid grid-cols-6 gap-4 p-3 font-bold bg-black/40 rounded-xl">
             <div className="col-span-2 text-center">Equipo</div>
             <div className="text-center">Ganados</div>
