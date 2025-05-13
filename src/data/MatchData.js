@@ -1,8 +1,6 @@
 // Match Data Match Data using in Game
 import WindJaguars from "../assets/img/WindJaguars.webp";
 import GemRubies from "../assets/img/GemRubies.webp";
-import WebHawks from "../assets/img/WebHawks.webp";
-
 const MatchData = {
   id: 1,
   level: 1,
