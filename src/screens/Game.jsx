@@ -115,7 +115,6 @@ const Game = () => {
   };
 
   //Save the final match result
-
   const { saveMatchResult } = useGame();
 
   useEffect(() => {
@@ -199,9 +198,11 @@ const Game = () => {
                           "¡Casi! ❌ Haz fallado el tiro ¡La próxima vez será gol! ⚽"
                         );
                         nextExercise();
+                        saveMatchResult();
                       }
 
                       nextExercise();
+                      saveMatchResult();
                     }}
                   >
                     Verificar respuesta

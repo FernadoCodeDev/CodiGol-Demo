@@ -11,7 +11,7 @@ export const GameProvider = ({ children }) => {
   const [playerGoals, setPlayerGoals] = useState(0);
   const [rivalGoals, setRivalGoals] = useState(2); 
   const [playerTeam, setPlayerTeam] = useState({
-    name: "WindJaguars",
+    name: "Wind Jaguars",
     logo: WindJaguars,
   });
   const [rivalTeam] = useState({
