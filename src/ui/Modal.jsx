@@ -44,8 +44,8 @@ const Modal = () => {
               de forma divertida.
               <br />
               <br />
-              Jugarás una liga llamada <strong>"Full Stack League"</strong>{" "}
-              compuesta por 10 partidos (lecciones). En cada uno aprenderás
+              Jugarás en la <strong>"Full Stack League"</strong>{" "}
+              compuesta por 10 partidos leccione. En cada uno aprenderás
               técnicas esenciales sobre{" "}
               <span className="font-semibold text-yellow-500">
                 Tailwind CSS.

@@ -24,11 +24,21 @@ const Modal = ({ isOpen, toggleModal }) => {
 
         <h2 className="mb-4 text-xl font-bold">CódiGol Instrucciones</h2>
         <p className="text-base leading-relaxed md:text-lg">
-          <strong>CódiGol</strong> es un videojuego educativo donde aprenderás a usar{" "}
-          <span className="font-semibold text-yellow-500">Tailwind CSS</span> de forma divertida.
-          <br /><br />
-          Jugarás una liga llamada <strong>"Full Stack League"</strong> compuesta por 10 partidos (lecciones).
-          <br /><br />
+          <strong>CódiGol</strong> es un videojuego educativo donde aprenderás a
+          usar{" "}
+          <span className="font-semibold text-yellow-500">Tailwind CSS</span> de
+          forma divertida.
+          <br />
+          <br />
+          Jugarás en la <strong>"Full Stack League"</strong> compuesta por 10
+          partidos leccione. En cada uno aprenderás técnicas esenciales sobre{" "}
+          <span className="font-semibold text-yellow-500">Tailwind CSS.</span>
+          <br />
+          <br />
+          A medida que avances, los equipos rivales serán más difíciles, tendrás
+          menos oportunidades de anotar si no aplicas bien lo aprendido.
+          <br />
+          <br />
           Esta es una <strong>demo</strong> creada como parte de la{" "}
           <a
             className="font-bold transition duration-300 ease-in-out hover:text-yellow-500"
@@ -38,10 +48,14 @@ const Modal = ({ isOpen, toggleModal }) => {
           >
             Hackathon de miduDev 2025
           </a>
-          .
-          <br /><br />
-          Este proyecto usa <strong>React</strong>, <strong>Tailwind CSS</strong> y autenticación con <strong>Clerk</strong>.
-          <br /><br />
+          . Solo los primeros 3 partidos están disponibles.
+          <br />
+          <br />
+          Este proyecto usa <strong>React</strong>,{" "}
+          <strong>Tailwind CSS</strong> y la autenticación fue implementada con{" "}
+          <strong>Clerk</strong>.
+          <br />
+          <br />
           ¡Prepárate para jugar, aprender y ganar la liga!
         </p>
       </div>
