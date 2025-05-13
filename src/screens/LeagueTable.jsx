@@ -94,7 +94,7 @@ const LeagueTable = () => {
             Tabla de Resultados
           </h1>
 
-          {/* Encabezado */}
+    
           <div className="grid grid-cols-6 gap-4 p-3 font-bold bg-black/40 rounded-xl">
             <div className="col-span-2 text-center">Equipo</div>
             <div className="text-center">Ganados</div>
@@ -103,7 +103,6 @@ const LeagueTable = () => {
             <div className="text-center">Puntos</div>
           </div>
 
-         {/* Aquí solo recorremos una vez la tabla */}
           {leagueTable.map((team) => (
             <div
               key={team.id}
