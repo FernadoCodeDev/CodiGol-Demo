@@ -47,6 +47,7 @@ const GameData = [
       "md:text-base",
       "lg:text-2xl",
       "xl:text-4xl",
+      "2xl:text-8xl",
     ],
   },
 ];
