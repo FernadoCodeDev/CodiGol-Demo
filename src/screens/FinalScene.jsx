@@ -1,17 +1,20 @@
 import React from "react";
-import aa from "../assets/img/Background.webp";
+import Background from "../assets/img/Background.webp";
+import FerCode from "../assets/img/FerCode.webp";
+import GitHub from "../assets/img/GitHub.webp";
+import EventTime from "../ui/EventTime";
 
 const FinalScene = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen gap-2 px-4 py-8 bg-slate-100">
       <div className="w-full text-2xl max-w-[80rem] text-slate-600 font-bold flex flex-row justify-between p-2 border-b-4 border-neutral-800">
-        <h1>03/07/2025</h1>
+        <EventTime />
 
         <h1>#123456789</h1>
       </div>
 
       <div className="w-full text-white max-w-[80rem] p-4 text-2xl md:text-6xl font-bold tracking-widest text-center uppercase bg-neutral-800">
-        <h1 className="">Lorem</h1>
+        <h1 className="">INICIA LA FULL STACK LEAGUE</h1>
       </div>
 
       <div className="w-full max-w-[80rem] text-lg md:text-4xl text-center border-t-4 text-slate-600 border-neutral-800">
@@ -21,13 +24,14 @@ const FinalScene = () => {
       </div>
 
       <div className="relative w-full max-w-[80rem] mx-auto">
-        <div className="absolute w-full p-4 text-2xl text-white md:text-7xl">
-          <h1 className="">Lorem</h1>
+        <div className="absolute w-full p-4 text-2xl text-white md:text-4xl">
+          <h1 className="">UNA JORNADA LLENA DE EMOCIÓN Y CÓDIGO</h1>
         </div>
-        <img src={aa} alt="" className="w-full h-auto " />
-        <div className="grid grid-cols-4 md:grid-cols-6 gap-2 p-4 absolute bottom-0 left-0 w-full h-[33%] md:h-[20%] bg-red-600 ">
+        <img src={Background} alt="" className="w-full h-auto " />
+        <div className="grid grid-cols-4 md:grid-cols-6 gap-2 justify-between items-center p-4 absolute bottom-0 left-0 w-full h-[33%] md:h-[20%] bg-red-600 ">
           <p className="col-span-3 text-lg text-white md:col-span-5 ">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
+            Comenzó la esperada Full Stack League con partidos emocionantes
+            desde el primer minuto.
           </p>
 
           <div className="flex p-4 text-lg font-bold text-red-600 bg-yellow-400 ">
@@ -54,21 +58,25 @@ const FinalScene = () => {
           </div>
 
           <p className="p-2 text-base md:text-xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit.
+            CódiGol fue desarrollado como parte del reto de la Hackathon
+            organizada por Midudev. Este videojuego busca enseñar JavaScript de
+            una forma divertida, combinando el aprendizaje con la emoción del
+            fútbol.
           </p>
 
           <p className="p-2 text-base md:text-xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit.
+            Gracias a esta iniciativa, cientos de desarrolladores compartieron
+            sus ideas en proyectos creativos, educativos y originales. como el
+            mío con <span className="font-boldbold">CódiGol</span> creado con
+            React y Tailwind
           </p>
         </div>
 
-        <div className="flex flex-col items-center justify-center text-center">
-          <div className="w-full h-28 bg-slate-200"></div>
+        <div className="flex flex-col items-center justify-start text-center">
+          <img src={FerCode} alt="FerCode" className="w-full h-auto" />
 
           <div className="grid items-center justify-center w-full grid-cols-4 p-2 text-white bg-neutral-800">
-           <a
+            <a
               className="col-span-3 font-bold hover:text-red-600"
               target="_blank"
               rel="noopener noreferrer"
@@ -83,13 +91,14 @@ const FinalScene = () => {
           </div>
 
           <p className="p-2 text-base md:text-xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit.
+            Soy un apasionado por el código y el aprendizaje. CódiGol es una
+            forma de combinar mi gusto por el fútbol y la programación para
+            ayudar a otros a aprender mientras se divierten jugando.
           </p>
         </div>
 
-        <div className="flex flex-col items-center justify-center text-center ">
-          <div className="w-full h-28 bg-slate-200"></div>
+        <div className="flex flex-col items-center justify-start text-center ">
+          <img src={GitHub} alt="GitHub" className="w-full h-auto" />
 
           <div className="grid items-center justify-center w-full grid-cols-4 p-2 text-white bg-neutral-800">
             <a
@@ -98,7 +107,7 @@ const FinalScene = () => {
               rel="noopener noreferrer"
               href="https://github.com/FernadoCodeDev"
             >
-             GitHub
+              GitHub
             </a>
 
             <div className="flex p-2 font-bold bg-red-600">
@@ -107,8 +116,10 @@ const FinalScene = () => {
           </div>
 
           <p className="p-2 text-base md:text-xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit.
+            "Puedes revisar mi perfil de GitHub para conocer más sobre este
+            proyecto y otros desarrollos personales. ¡Espero que encuentres algo
+            que te inspire o te ayude en tu camino como desarrollador!
+            <span className="font-bold"> ¡Gracias por Jugar!</span>
           </p>
         </div>
       </div>
