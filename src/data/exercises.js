@@ -14,7 +14,7 @@ const exercises = [
     level: 1,
     prompt:
       "El texto debe iniciar con 16px, cambiar a 24px en md y a 36px en lg",
-    requiredClasses: ["text-base", "md:text-xl", "lg:text-4xl"],
+    requiredClasses: ["text-base", "md:text-2xl", "lg:text-4xl"],
   },
   {
     id: 3,

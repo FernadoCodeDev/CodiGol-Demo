@@ -159,26 +159,38 @@ const Training = () => {
 
                     <strong>Recuerda:</strong>
 
-                    <div className="grid grid-cols-4 gap-4 text-xs">
-                      <p>text-xs = 12px</p>
-                      <p>text-sm = 14px</p>
-                      <p>text-base = 16px</p>
-                      <p>text-lg = 18px</p>
-                      <p>text-xl = 20px</p>
-                      <p>text-2xl = 24px</p>
-                      <p>text-3xl = 30px</p>
-                      <p>text-4xl = 36px</p>
-                      <p>text-5xl = 48px</p>
-                      <p>text-6xl = 60px</p>
-                      <p>text-7xl = 72px</p>
-                      <p>text-8xl = 96px</p>
-                      <p>text-9xl = 128px</p>
-                      <p>menor a 640 nada</p>
-                      <p>sm desde 640px</p>
-                      <p>md desde 768px</p>
-                      <p>lg desde 1024px</p>
-                      <p>xl desde 1280px</p>
-                      <p>2xl desde 1536px</p>
+                    <div className="grid grid-cols-2">
+                      <div className="grid grid-cols-2 gap-2 text-xs">
+                        <strong className="col-span-2">Tamaños</strong>
+                        <p>text-xs = 12px</p>
+                        <p>text-sm = 14px</p>
+                        <p>text-base = 16px</p>
+                        <p>text-lg = 18px</p>
+                        <p>text-xl = 20px</p>
+                        <p>text-2xl = 24px</p>
+                        <p>text-3xl = 30px</p>
+                        <p>text-4xl = 36px</p>
+                        <p>text-5xl = 48px</p>
+                        <p>text-6xl = 60px</p>
+                        <p>text-7xl = 72px</p>
+                        <p>text-8xl = 96px</p>
+                        <p>text-9xl = 128px</p>
+                      </div>
+
+                      <div className="flex flex-col gap-2 text-xs">
+                        <strong className="col-span-2">Responsive</strong>
+                        <p>menor a 640 no se usa ninguna clase</p>
+                        <p>sm desde 640px</p>
+                        <p>md desde 768px</p>
+                        <p>lg desde 1024px</p>
+                        <p>xl desde 1280px</p>
+                        <p>2xl desde 1536px</p>
+                      </div>
+
+                      <div className="flex flex-col col-span-2 gap-2 text-xs text-center">
+                        <strong className="">Ejemplo:</strong>
+                        <p>text-3xl lg:text-8xl</p>
+                      </div>
                     </div>
                   </div>
                 )}
