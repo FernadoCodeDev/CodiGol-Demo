@@ -8,6 +8,7 @@ import DialogueBox from "../ui/DialogueBox";
 import TrainingPoint from "../ui/TrainingPoint";
 import Preview from "../ui/Preview";
 import Editor from "../ui/Editor";
+import ModalSize from "../ui/ModalSize";
 //exercises and evaluate Answer
 import exercises from "../data/exercises";
 import evaluateAnswer from "../utils/evaluateAnswer";
@@ -84,6 +85,8 @@ const Training = () => {
         <div style={{ width: previewWidth }} className="absolute ">
           <Navigation />
         </div>
+
+        <ModalSize className="absolute" />
 
         <div
           ref={resizerRef}

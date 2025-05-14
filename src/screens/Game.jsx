@@ -2,7 +2,7 @@
 //Dialogues and exercise
 import React, { useRef } from "react";
 import { useEffect, useState } from "react";
-
+import ModalSize from "../ui/ModalSize";
 import TestFund from "../assets/img/TestFund.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
@@ -139,6 +139,8 @@ const Game = () => {
         <div style={{ width: previewWidth }} className="absolute ">
           <Navigation />
         </div>
+
+        <ModalSize className="absolute" />
 
         <div
           ref={resizerRef}

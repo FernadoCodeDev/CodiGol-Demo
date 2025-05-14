@@ -4,6 +4,7 @@ import { useState } from "react";
 import BankingFund from "../assets/img/BankingFund.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
+import ModalSize from "../ui/ModalSize";
 
 const SubBench = () => {
   const [level, setLevel] = useState(1);
@@ -20,11 +21,10 @@ const SubBench = () => {
           <Navigation />
         </div>
 
-        <div className="relative grid min-h-screen grid-cols-1 col-span-4 ">
-          <h1 className="text-5xl font-bold text-black md:text-6xl drop-shadow-lg">
-            Lección 4: BankingFund
-          </h1>
+        <ModalSize className="absolute" />
 
+        <div className="relative grid min-h-screen grid-cols-1 col-span-4 ">
+  
            <DialogueBox level={level} currentPhase="SubBench"/>
         </div>
       </div>

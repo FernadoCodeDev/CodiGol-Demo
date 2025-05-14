@@ -3,6 +3,7 @@ import Background from "../assets/img/Background.webp";
 import FerCode from "../assets/img/FerCode.webp";
 import GitHub from "../assets/img/GitHub.webp";
 import EventTime from "../ui/EventTime";
+import ModalSize from "../ui/ModalSize";
 
 const FinalScene = () => {
   return (
@@ -12,6 +13,8 @@ const FinalScene = () => {
 
         <h1>#123456789</h1>
       </div>
+
+      <ModalSize className="absolute" />
 
       <div className="w-full text-white max-w-[80rem] p-4 text-2xl md:text-6xl font-bold tracking-widest text-center uppercase bg-neutral-800">
         <h1 className="">INICIA LA FULL STACK LEAGUE</h1>

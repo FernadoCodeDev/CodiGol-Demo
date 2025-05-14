@@ -7,6 +7,7 @@ import {
 } from "@clerk/clerk-react";
 import Background from "../assets/img/Background.webp";
 import Modal from "../ui/Modal";
+import ModalSize from "../ui/ModalSize";
 import { useUser } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
 
@@ -34,6 +35,8 @@ const Home = () => {
       ></div>
 
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+
+      <ModalSize className="absolute" />
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center text-white">
         <h1 className="mb-4 text-5xl font-bold md:text-6xl">

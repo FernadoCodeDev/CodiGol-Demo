@@ -5,6 +5,7 @@ import { useState } from "react";
 import trainingFund from "../assets/img/TrainingFund.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
+import ModalSize from "../ui/ModalSize";
 
 const LessonIntro = () => {
   const [level, setLevel] = useState(1);
@@ -30,9 +31,7 @@ const LessonIntro = () => {
         </div>
 
         <div className="relative grid min-h-screen grid-cols-1 col-span-4 ">
-          <h1 className="text-5xl font-bold text-black md:text-6xl drop-shadow-lg">
-            Lección 1: Introducción a Tailwind
-          </h1>
+          <ModalSize className="absolute" />
 
           {/*  
        Level test, moving from one level to another showing the assigned data

@@ -5,6 +5,7 @@ import { navigateToNextPhase } from "../utils/navigateToNextPhase";
 import Background from "../assets/img/Background.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
+import ModalSize from "../ui/ModalSize";
 import PhantomViper from "../assets/img/PhantomViper.webp";
 import GemRubies from "../assets/img/GemRubies.webp";
 import TuskElephants from "../assets/img/TuskElephants.webp";
@@ -121,6 +122,8 @@ const LeagueTable = () => {
         <div className="relative z-20 h-full ">
           <Navigation />
         </div>
+
+        <ModalSize className="absolute" />
 
         <div className="relative text-white  col-span-4 p-6 m-auto max-w-[60rem]">
           <h1 className="text-4xl font-bold text-white drop-shadow-lg">

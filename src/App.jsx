@@ -28,8 +28,8 @@ const App = () => {
           <Route path="/Game" element={<Game />} />
           <Route path="/FinalScore" element={<FinalScore />} />
           <Route path="/LeagueTable" element={<LeagueTable />} />
-           <Route path="/LeagueTable" element={<LeagueTable />} />
           <Route path="/FinalScene" element={<FinalScene />} />
+           <Route path="/Prove" element={<Prove />} />
         </Routes>
       </Router>
     </ClerkProvider>

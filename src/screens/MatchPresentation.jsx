@@ -3,6 +3,7 @@ import Background from "../assets/img/Background.webp";
 import Navigation from "../ui/Navigation";
 import WindJaguars from "../assets/img/WindJaguars.webp";
 import MatchPresentationData from "../data/MatchPresentation";
+import ModalSize from "../ui/ModalSize";
 import { useNavigate } from "react-router-dom";
 import { navigateToNextPhase } from "../utils/navigateToNextPhase";
 
@@ -36,6 +37,8 @@ const MatchPresentation = () => {
         <div className="relative z-20 h-full">
           <Navigation />
         </div>
+
+        <ModalSize className="absolute" />
 
         <div className="relative flex flex-col min-h-screen col-span-4 text-center text-white">
           <h1 className="text-6xl font-bold drop-shadow-lg">Liga Full Stack</h1>
