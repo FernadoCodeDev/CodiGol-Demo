@@ -1,5 +1,7 @@
 //Points table (general progress)
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { navigateToNextPhase } from "../utils/navigateToNextPhase";
 import Background from "../assets/img/Background.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
@@ -97,6 +99,16 @@ const LeagueTable = () => {
   const leagueTable = Object.values(calculateTable(fullMatchResults)).sort(
     (a, b) => b.points - a.points
   );
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      navigateToNextPhase("LeagueTable", navigate);
+    }, 20000);
+
+    return () => clearTimeout(timeout);
+  }, [navigate]);
 
   return (
     <div className="relative w-full min-h-screen">

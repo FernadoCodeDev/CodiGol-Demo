@@ -6,7 +6,7 @@ export const navigateToNextPhase = (currentPhase, navigate) => {
     SubBench: "/Game",
     Game: "/FinalScore",
     FinalScore: "/LeagueTable",
-    LeagueTable: "/LessonIntro",
+    LeagueTable: "/FinalScene",
   };
 
   const nextRoute = routes[currentPhase];

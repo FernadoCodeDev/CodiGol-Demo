@@ -12,6 +12,7 @@ import Game from "./page/Game";
 import FinalScore from "./page/FinalScore";
 import LeagueTable from "./page/LeagueTable";
 import Prove from "./page/Prove";
+import FinalScene from "./page/FinalScene";
 
 const App = () => {
   
@@ -27,7 +28,8 @@ const App = () => {
           <Route path="/Game" element={<Game />} />
           <Route path="/FinalScore" element={<FinalScore />} />
           <Route path="/LeagueTable" element={<LeagueTable />} />
-          <Route path="/Prove" element={<Prove />} />
+           <Route path="/LeagueTable" element={<LeagueTable />} />
+          <Route path="/FinalScene" element={<FinalScene />} />
         </Routes>
       </Router>
     </ClerkProvider>
