@@ -3,82 +3,83 @@ const Training = {
   1: [
     {
       speaker: "trainer",
-      text: "¡Bien! Vamos a comenzar con una de las técnicas más importantes del torneo...",
+      text: "¡Bien! Vamos a comenzar con una de las técnicas más importantes de Tailwind...",
     },
     {
       speaker: "trainer",
-      text: "La técnica Responsive. Si dominamos esto, dominamos el ritmo del campo.",
+      text: "La técnica Responsive. Si dominamos esto, controlamos el ritmo del campo.",
     },
     {
       speaker: "trainer",
-      text: "Un buen equipo se adapta. Al clima, al rival... y en nuestro caso: al tamaño de pantalla.",
+      text: "Un buen equipo se adapta: al clima, al rival... y nosotros, ¡a cualquier pantalla!",
     },
     {
       speaker: "trainer",
-      text: "Con Tailwind CSS, esa adaptación se logra usando clases como sm:, md:, lg:, xl: y 2xl:, los 2 puntos son importantes, que no se te olvide.",
+      text: "Con Tailwind CSS, esa adaptación se logra usando clases como: sm:, md:, lg:, xl: y 2xl:. Esos dos puntos son clave, ¡no los olvides!",
     },
     {
       speaker: "trainer",
-      text: "Cada una representa un punto de quiebre. Un momento donde cambia la estrategia.",
-    },
-
-     {
-      speaker: "trainer",
-      text: "la primera y más fácil de entender en que a un maximo de 640px no necesitas usar ninguna, de ahi en adelnate si.",
-    },
-
-    {
-      speaker: "trainer",
-      text: "la técnica sm, corresponde a pantallas moviles que corresponde como máximo a 640px de ahi en adelante debes usar md ",
-    },
-
-    {
-      speaker: "trainer",
-      text: "la técnica md corresponde a pantallas pequeñas que corresponde a un inicio de 768px a un máximo de 1024px de ahi en adelante debes usar lg",
+      text: "Cada clase representa un punto de quiebre, un momento donde cambiamos la estrategia según el tamaño de pantalla.",
     },
     {
       speaker: "trainer",
-      text: "la técnica lg corresponde a pantallas medianas que corresponde a un inicio de 1024px a un máximo de 1280px de ahi en adelante debes usar xl",
-    },
-
-    {
-      speaker: "trainer",
-      text: "la técnica xl corresponde a pantallas grandes que corresponde a un inicio de 1280px a un máximo de 1536px de ahi en adelante debes usar 2xl",
+      text: "Cuando la pantalla mide 640px o menos, no necesitas ninguna clase. Ese es tu estado base.",
     },
     {
       speaker: "trainer",
-      text: "y la técnica 2xl corresponde a pantallas extra grandes que corresponde a un inicio de 1536px, esta es la última de la técnica Responsive",
-    },
-
-    {
-      speaker: "trainer",
-      text: "y ahora Cuando colocas text-sm, es como decir: 'usa este tamaño por defecto'.",
+      text: "La clase sm: se usa a partir de 640px. Ideal para pantallas móviles grandes.",
     },
     {
       speaker: "trainer",
-      text: "Pero si pones md:text-2xl, estás diciendo: 'cuando el campo se haga mediano... cambia de jugada a '.",
+      text: "md: se activa desde 768px hasta 1024px. Perfecta para tablets y pantallas pequeñas.",
     },
     {
       speaker: "trainer",
-      text: "Así es como funciona el sistema responsive. Todo empieza en pantallas móviles que corresponde a la tecnica sm que corresponde a pantallas extra grandes.",
-    },
-
-    
-    {
-      speaker: "trainer",
-      text: "Vamos a practicarlo con una jugada clave: el tamaño del texto, o como le llamamos: text-size.",
+      text: "lg: se usa desde 1024px hasta 1280px. Es para pantallas medianas, como muchas laptops.",
     },
     {
       speaker: "trainer",
-      text: "Con text-xl hacemos que el texto crezca. Con text-5xl, lo hacemos gritar.",
+      text: "xl: va desde 1280px hasta 1536px. Ya estamos hablando de pantallas grandes.",
     },
     {
       speaker: "trainer",
-      text: "Empezando con text-xs que crece 12px, con text-sm 14px, text-base 16px, text-lg 18px, text-xl 20px, text-2xl 24px, text-3xl 30px, text-4xl 36px...",
+      text: "2xl: se aplica desde 1536px en adelante. Para monitores gigantes o pantallas ultra grandes.",
     },
     {
       speaker: "trainer",
-      text: "text-5xl 48px, text-6xl 60px, text-7xl 72px text-8xl 96px y text-9xl 128px al inicio sera algo confuso pero acuerdate de aprenderlas, serán utiles durante el partido.",
+      text: "Ahora... ¿qué pasa con los tamaños de texto?",
+    },
+    {
+      speaker: "trainer",
+      text: "Si escribes text-sm, defines un tamaño de texto pequeño por defecto.",
+    },
+    {
+      speaker: "trainer",
+      text: "Pero si usas md:text-2xl, estás diciendo: 'cuando la pantalla sea mediana, cambia el tamaño a 2xl'. ¡Cambio de jugada!",
+    },
+    {
+      speaker: "trainer",
+      text: "Así es como funciona la técnica responsive. Se adapta al campo, siempre.",
+    },
+    {
+      speaker: "trainer",
+      text: "Ahora complementemos esto con otra jugada clave: el tamaño del texto, también conocido como text-size.",
+    },
+    {
+      speaker: "trainer",
+      text: "Con text-xl el texto crece. Con text-5xl... ¡el mensaje grita!",
+    },
+    {
+      speaker: "trainer",
+      text: "Empieza en text-xs (12px), luego text-sm (14px), text-base (16px), text-lg (18px), text-xl (20px), text-2xl (24px), text-3xl (30px), text-4xl (36px)...",
+    },
+    {
+      speaker: "trainer",
+      text: "text-5xl (48px), text-6xl (60px), text-7xl (72px), text-8xl (96px) y text-9xl (128px).",
+    },
+    {
+      speaker: "trainer",
+      text: "Sí, es mucho al inicio, pero aprenderlos te dará ventaja en el partido. ¡Créeme!",
     },
     {
       speaker: "trainer",
@@ -86,27 +87,27 @@ const Training = {
     },
     {
       speaker: "trainer",
-      text: "Como si el mensaje gritara más fuerte mientras más grande es la pantalla. Esa es la táctica.",
+      text: "Como si el mensaje gritara más fuerte mientras más grande es la pantalla. ¡Esa es la táctica!",
     },
     {
       speaker: "trainer",
-      text: "Pero ojo, esto no es solo cuestión de tamaño. También importa la claridad...",
+      text: "Pero ojo, esto no es solo cuestión de tamaño. También importa la claridad.",
     },
     {
       speaker: "trainer",
-      text: "Algo que siento que te sera útil al jugar es que a veces necesitaras ocultarte eso lo logras con hidden y para volver a mostrar usa block con alguna de las técnias de responsive, siento que te sera útil durante el partido.",
+      text: "Y algo más... a veces te conviene ocultarte. Con la clase hidden puedes esconder un elemento, y luego mostrarlo con block usando responsive.",
     },
     {
       speaker: "trainer",
-      text: "Pero eso... lo veremos en el partido.",
+      text: "Eso puede salvarte durante un partido. Pero eso... lo veremos más adelante.",
     },
     {
       speaker: "trainer",
-      text: "Por ahora, concéntrate en usar bien estas clases. Recuerda: adaptarse es parte del juego.",
+      text: "Por ahora, concéntrate en estas clases. Recuerda: ¡adaptarse es parte del juego!",
     },
     {
       speaker: "trainer",
-      text: "¡Ve y demuestra lo que has aprendido en este ejercicio! recuerda que en los entramientos puedes pedir explicaciones.",
+      text: "¡Ve y demuestra lo que aprendiste en este ejercicio! Y no olvides: en los entrenamientos siempre puedes pedir una explicación extra.",
     },
   ],
 
