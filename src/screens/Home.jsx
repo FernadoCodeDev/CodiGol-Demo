@@ -19,7 +19,7 @@ const Home = () => {
 
   const handlePlayClick = () => {
     if (isSignedIn) {
-      navigate("/Lesson1");
+      navigate("/LessonIntro");
       console.log("Registro ");
     } else {
       signInButtonRef.current?.click();
