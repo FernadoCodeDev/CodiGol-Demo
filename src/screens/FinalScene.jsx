@@ -75,17 +75,26 @@ const FinalScene = () => {
           </div>
 
           <p className="p-2 text-base md:text-xl">
-            CódiGol fue desarrollado como parte del reto de la Hackathon
-            organizada por Midudev. Este videojuego busca enseñar JavaScript de
-            una forma divertida, combinando el aprendizaje con la emoción del
-            fútbol.
+            <strong>CódiGol</strong> es una demo creada como parte de la
+            Hackathon organizada por Midudev 2025. Este pequeño videojuego web
+            tiene como objetivo ayudar a practicar y aprender Tailwind CSS de
+            manera divertida y visual.
           </p>
 
           <p className="p-2 text-base md:text-xl">
-            Gracias a esta iniciativa, cientos de desarrolladores compartieron
-            sus ideas en proyectos creativos, educativos y originales. como el
-            mío con <span className="font-boldbold">CódiGol</span> creado con
-            React y Tailwind
+            La idea surgió al notar que, más allá de la documentación oficial,
+            no existían muchas experiencias interactivas para aprender Tailwind.
+            Por eso nació <strong>CódiGol</strong>: una propuesta creativa para
+            quienes buscan una forma distinta de entender y aplicar esta potente
+            herramienta de estilos.
+          </p>
+
+          <p className="p-2 text-base md:text-xl">
+            Actualmente es solo una demo, pero en el futuro se lanzará una
+            versión más completa y avanzada.{" "}
+            <span className="font-bold">
+              ¡Gracias por visitar y ser parte de este primer paso!
+            </span>
           </p>
         </div>
 
