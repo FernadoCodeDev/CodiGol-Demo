@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
+import { useUser } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
+import { navigateToNextPhase } from "../utils/navigateToNextPhase";
+import ProtectedRoute from "../hook/ProtectedRoute";
 import Background from "../assets/img/Background.webp";
 import Navigation from "../ui/Navigation";
 import WindJaguars from "../assets/img/WindJaguars.webp";
 import MatchPresentationData from "../data/MatchPresentation";
 import ModalSize from "../ui/ModalSize";
-import { useNavigate } from "react-router-dom";
-import { navigateToNextPhase } from "../utils/navigateToNextPhase";
 
 const MatchPresentation = () => {
   const navigate = useNavigate();

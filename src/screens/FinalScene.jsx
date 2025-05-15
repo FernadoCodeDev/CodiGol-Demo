@@ -1,4 +1,6 @@
 import React from "react";
+import { useUser } from "@clerk/clerk-react";
+import ProtectedRoute from "../hook/ProtectedRoute";
 import Background from "../assets/img/Background.webp";
 import FerCode from "../assets/img/FerCode.webp";
 import GitHub from "../assets/img/GitHub.webp";

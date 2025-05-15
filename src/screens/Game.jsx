@@ -1,7 +1,9 @@
 //Practical training
 //Dialogues and exercise
 import React, { useRef } from "react";
+import { useUser } from "@clerk/clerk-react";
 import { useEffect, useState } from "react";
+import ProtectedRoute from "../hook/ProtectedRoute";
 import ModalSize from "../ui/ModalSize";
 import TestFund from "../assets/img/TestFund.webp";
 import Navigation from "../ui/Navigation";

@@ -20,10 +20,10 @@ const Home = () => {
   const handlePlayClick = () => {
     if (isSignedIn) {
       navigate("/LessonIntro");
-      console.log("Registro ");
+      //console.log("Registro ");
     } else {
       signInButtonRef.current?.click();
-      console.log("No Registro ");
+      //console.log("No Registro ");
     }
   };
 

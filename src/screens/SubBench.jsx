@@ -1,6 +1,8 @@
 //Banking scene before the change
 import React, { useRef } from "react";
 import { useState } from "react";
+import { useUser } from "@clerk/clerk-react";
+import ProtectedRoute from "../hook/ProtectedRoute";
 import BankingFund from "../assets/img/BankingFund.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";

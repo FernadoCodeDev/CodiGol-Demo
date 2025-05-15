@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
+import { useUser } from "@clerk/clerk-react";
 import { useGame } from "../context/GameContext";
+import ProtectedRoute from "../hook/ProtectedRoute";
 import Background from "../assets/img/Background.webp";
 import Navigation from "../ui/Navigation";
 import { useNavigate } from "react-router-dom";

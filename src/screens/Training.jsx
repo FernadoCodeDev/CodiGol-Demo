@@ -2,6 +2,8 @@
 //Dialogues and exercise
 import React, { useRef } from "react";
 import { useEffect, useState } from "react";
+import { useUser } from "@clerk/clerk-react";
+import ProtectedRoute from "../hook/ProtectedRoute";
 import trainingFund from "../assets/img/ExerciseFund.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";

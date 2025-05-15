@@ -1,7 +1,8 @@
 //Lesson Introduction
 import React, { useRef } from "react";
 import { useState } from "react";
-
+import { useUser } from "@clerk/clerk-react";
+import ProtectedRoute from "../hook/ProtectedRoute";
 import trainingFund from "../assets/img/TrainingFund.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";

@@ -2,6 +2,8 @@
 import React, { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { navigateToNextPhase } from "../utils/navigateToNextPhase";
+import { useUser } from "@clerk/clerk-react";
+import ProtectedRoute from "../hook/ProtectedRoute";
 import Background from "../assets/img/Background.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
