@@ -48,7 +48,7 @@ const Modal = ({ isOpen, toggleModal }) => {
           >
             Hackathon de miduDev 2025
           </a>
-          . Solo los primeros 3 partidos están disponibles.
+          . Solo el primer partido está disponible.
           <br />
           <br />
           Este proyecto usa <strong>React</strong>,{" "}
