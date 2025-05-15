@@ -1,21 +1,29 @@
 import React, { useState, useEffect } from "react";
 
 const ModalSize = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1025);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1281);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1281);
     };
 
-    if (handleResize) {
-      window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) {
       document.body.classList.add("overflow-hidden");
     } else {
-      window.removeEventListener("resize", handleResize);
       document.body.classList.remove("overflow-hidden");
     }
-  }, []);
+  }, [isMobile]);
 
   return (
     <>

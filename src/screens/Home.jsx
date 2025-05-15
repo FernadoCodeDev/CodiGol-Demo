@@ -27,6 +27,8 @@ const Home = () => {
     }
   };
 
+
+
   return (
     <div className="relative w-full min-h-screen">
       <div
@@ -43,7 +45,9 @@ const Home = () => {
           Bienvenido a <span className="text-yellow-500">CódiGol</span>
         </h1>
         <p className="max-w-xl mb-8 text-lg md:text-xl">
-          Aprende <span className="font-bold text-yellow-400">Tailwind CSS</span> jugando y dominando estilos como un pro.
+          Aprende{" "}
+          <span className="font-bold text-yellow-400">Tailwind CSS</span>{" "}
+          jugando y dominando estilos como un pro.
         </p>
 
         <div className="flex flex-col w-full max-w-xs gap-4">
@@ -57,12 +61,11 @@ const Home = () => {
           <Modal />
 
           <SignedOut>
-        
             <SignInButton
               mode="modal"
               afterSignInUrl="/"
               ref={signInButtonRef}
-              className="hidden" 
+              className="hidden"
             />
           </SignedOut>
 

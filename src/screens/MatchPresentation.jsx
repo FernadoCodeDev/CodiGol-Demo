@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useUser } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
 import { navigateToNextPhase } from "../utils/navigateToNextPhase";
+import { unlockNextPage } from "../utils/routeGuard";
 import ProtectedRoute from "../hook/ProtectedRoute";
 import Background from "../assets/img/Background.webp";
 import Navigation from "../ui/Navigation";
@@ -27,6 +28,10 @@ const MatchPresentation = () => {
   }, [navigate]);
 
   if (!matchData) return <div>Error: No se encontró el partido</div>;
+
+  useEffect(() => {
+    unlockNextPage("/SubBench");
+  }, []);
 
   return (
     <div className="relative w-full min-h-screen">

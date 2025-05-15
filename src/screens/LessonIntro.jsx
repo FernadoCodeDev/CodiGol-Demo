@@ -1,12 +1,15 @@
 //Lesson Introduction
 import React, { useRef } from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 import { useUser } from "@clerk/clerk-react";
 import ProtectedRoute from "../hook/ProtectedRoute";
 import trainingFund from "../assets/img/TrainingFund.webp";
 import Navigation from "../ui/Navigation";
 import DialogueBox from "../ui/DialogueBox";
 import ModalSize from "../ui/ModalSize";
+import { unlockNextPage } from "../utils/routeGuard";
+
 
 const LessonIntro = () => {
   const [level, setLevel] = useState(1);
@@ -18,6 +21,10 @@ const LessonIntro = () => {
   const handlePrevLevel = () => {
     setLevel((prev) => (prev > 1 ? prev - 1 : 1));
   };
+
+    useEffect(() => {
+    unlockNextPage("/Training");
+  }, []);
 
   return (
     <div className="relative w-full min-h-screen">

@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { navigateToNextPhase } from "../utils/navigateToNextPhase";
 import { useUser } from "@clerk/clerk-react";
+import { unlockNextPage } from "../utils/routeGuard";
 import ProtectedRoute from "../hook/ProtectedRoute";
 import Background from "../assets/img/Background.webp";
 import Navigation from "../ui/Navigation";
@@ -106,6 +107,8 @@ const LeagueTable = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    unlockNextPage("/FinalScene");
+
     const timeout = setTimeout(() => {
       navigateToNextPhase("LeagueTable", navigate);
     }, 20000);

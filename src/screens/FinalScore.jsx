@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useUser } from "@clerk/clerk-react";
 import { useGame } from "../context/GameContext";
+import { unlockNextPage } from "../utils/routeGuard";
 import ProtectedRoute from "../hook/ProtectedRoute";
 import Background from "../assets/img/Background.webp";
 import Navigation from "../ui/Navigation";
@@ -15,6 +16,8 @@ const FinalScore = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    unlockNextPage("/LeagueTable");
+
     const timeout = setTimeout(() => {
       navigateToNextPhase("FinalScore", navigate);
     }, 15000);

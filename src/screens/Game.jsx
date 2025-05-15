@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { useUser } from "@clerk/clerk-react";
 import { useEffect, useState } from "react";
+import { unlockNextPage } from "../utils/routeGuard";
 import ProtectedRoute from "../hook/ProtectedRoute";
 import ModalSize from "../ui/ModalSize";
 import TestFund from "../assets/img/TestFund.webp";
@@ -121,6 +122,10 @@ const Game = () => {
 
   useEffect(() => {
     saveMatchResult(); // Save the result after the match ends
+  }, []);
+
+   useEffect(() => {
+    unlockNextPage("/FinalScore");
   }, []);
 
   return (

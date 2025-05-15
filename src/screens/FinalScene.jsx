@@ -1,6 +1,8 @@
 import React from "react";
 import { useUser } from "@clerk/clerk-react";
 import ProtectedRoute from "../hook/ProtectedRoute";
+import { useNavigate } from "react-router-dom";
+import { resetGameProgress } from "../utils/routeGuard";
 import Background from "../assets/img/Background.webp";
 import FerCode from "../assets/img/FerCode.webp";
 import GitHub from "../assets/img/GitHub.webp";
@@ -8,6 +10,16 @@ import EventTime from "../ui/EventTime";
 import ModalSize from "../ui/ModalSize";
 
 const FinalScene = () => {
+  const navigate = useNavigate();
+
+  const handleRestart = () => {
+    resetGameProgress();
+    navigate("/LessonIntro", { replace: true });
+  };
+
+  const handleGoHome = () => {
+    navigate("/", { replace: true });
+  };
   return (
     <div className="flex flex-col items-center justify-center min-h-screen gap-2 px-4 py-8 bg-slate-100">
       <div className="w-full text-2xl max-w-[80rem] text-slate-600 font-bold flex flex-row justify-between p-2 border-b-4 border-neutral-800">
@@ -131,12 +143,18 @@ const FinalScene = () => {
 
       <div className="w-full text-2xl max-w-[80rem] h-1 bg-neutral-800"></div>
 
-      <div className="w-full text-2xl max-w-[80rem]  flex flex-col md:flex-row justify-center md:justify-between p-2 border-t-4 border-neutral-800">
-        <button className="p-2 font-bold text-neutral-800 hover:bg-neutral-300 md:marker:w-80">
+      <div className="w-full text-2xl max-w-[80rem] flex flex-col md:flex-row justify-center md:justify-between p-2 border-t-4 border-neutral-800">
+        <button
+          className="p-2 font-bold text-neutral-800 hover:bg-neutral-300"
+          onClick={handleRestart}
+        >
           Volver a Jugar
         </button>
 
-        <button className="p-2 font-bold text-neutral-800 hover:bg-neutral-300 md:marker:w-80">
+        <button
+          className="p-2 font-bold text-neutral-800 hover:bg-neutral-300"
+          onClick={handleGoHome}
+        >
           Volver al inicio
         </button>
       </div>

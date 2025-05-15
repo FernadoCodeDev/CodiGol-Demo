@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { useEffect, useState } from "react";
 import { useUser } from "@clerk/clerk-react";
+import { unlockNextPage } from "../utils/routeGuard";
 import ProtectedRoute from "../hook/ProtectedRoute";
 import trainingFund from "../assets/img/ExerciseFund.webp";
 import Navigation from "../ui/Navigation";
@@ -68,6 +69,11 @@ const Training = () => {
   const handleFinishLevel = () => {
     navigateToNextPhase("Training", navigate);
   };
+
+   useEffect(() => {
+    unlockNextPage("/MatchPresentation");
+  }, []);
+
 
   return (
     <div className="relative w-full min-h-screen">

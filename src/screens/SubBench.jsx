@@ -1,7 +1,8 @@
 //Banking scene before the change
 import React, { useRef } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useUser } from "@clerk/clerk-react";
+import { unlockNextPage } from "../utils/routeGuard";
 import ProtectedRoute from "../hook/ProtectedRoute";
 import BankingFund from "../assets/img/BankingFund.webp";
 import Navigation from "../ui/Navigation";
@@ -10,6 +11,10 @@ import ModalSize from "../ui/ModalSize";
 
 const SubBench = () => {
   const [level, setLevel] = useState(1);
+
+    useEffect(() => {
+    unlockNextPage("/Game");
+  }, []);
 
   return (
     <div className="relative w-full min-h-screen">
