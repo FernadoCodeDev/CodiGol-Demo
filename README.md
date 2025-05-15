@@ -1,6 +1,6 @@
-![CódiGolLogo](https://github.com/FernadoCodeDev/CodiGol-Demo/blob/main/ImageReadme/imgReadmeN1.webp)
+![CódiGolLogo](https://github.com/FernadoCodeDev/CodiGol-Demo/blob/main/ImageReadme/CodiGolLogo.webp)
 
-#  ⛏ **CódiGol**
+#  ⚽ **CódiGol**
 
 Lorem
 
