@@ -142,7 +142,7 @@ const FinalScene = () => {
           </div>
 
           <p className="p-2 text-base md:text-xl">
-            "Puedes revisar mi perfil de GitHub para conocer más sobre este
+            Puedes revisar mi perfil de GitHub para conocer más sobre este
             proyecto y otros desarrollos personales. ¡Espero que encuentres algo
             que te inspire o te ayude en tu camino como desarrollador!
             <span className="font-bold"> ¡Gracias por Jugar!</span>
