@@ -100,13 +100,13 @@ Este modal tiene como objetivo evitar problemas de visualización y usabilidad, 
 
 - Ganar la liga enfrentando a 10 equipos diferentes
 - Resolver ejercicios reales de Tailwind para avanzar
-- Mejorar tus habilidades de TailwindCSS en un contexto práctico y divertido
+- Mejorar tus habilidades de **TailwindCSS** en un contexto práctico y divertido
 
 ## 📋 Notas técnicas
 
 - Cada pantalla está pensada como una fase: introducción, entrenamiento, partido y resultado.
 - Los ejercicios se evalúan en tiempo real y afectan el marcador.
-- Las rutas están protegidas con Clerk por que si se intenta acceder lo redireccionará a la página principal.
+- Las rutas están protegidas con [Clerk SDK](https://clerk.com/docs) por que si se intenta acceder lo redireccionará a la página principal.
 
 ## 🚀 Instalación y uso local
 
