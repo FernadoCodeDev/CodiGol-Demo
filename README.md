@@ -8,7 +8,7 @@ Esta idea surgió como un concepto que había descartado tiempo atrás, pero gra
 
 Inicialmente, el proyecto estaba pensado para enseñar JavaScript, pero al notar que ya existen muchas plataformas enfocadas en eso, decidí optar por **Tailwind CSS**, ya que más allá de su documentación oficial, no encontré recursos prácticos e interactivos para aprenderlo. Por eso, este proyecto busca ser una forma diferente, entretenida y dinámica de dominar **Tailwind CSS**, combinando aprendizaje y mecánicas de juego.
 
-Como parte del desarrollo para la [Hackathon de MiduDev 2025](https://github.com/midudev/hackaton-clerk-2025?tab=readme-ov-file#%EF%B8%8F-c%C3%B3mo-participar-en-la-hackat%C3%B3n), se integró [Clerk SDK](https://clerk.com/docs) para la autenticación de usuarios: es necesario registrarse o iniciar sesión para poder jugar.
+Como parte del desarrollo para la [Hackathon de MiduDev 2025](https://github.com/midudev/hackaton-clerk-2025?tab=readme-ov-file#%EF%B8%8F-c%C3%B3mo-participar-en-la-hackat%C3%B3n), se integró [Clerk SDK](https://clerk.com/docs) para la autenticación de usuarios donde **es necesario registrarse o iniciar sesión para poder jugar**.
 
 ## 🌐 Enlace a la demo
 
