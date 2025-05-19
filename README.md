@@ -44,7 +44,7 @@ A continuación se muestran capturas del flujo de autenticación:
 
 ## 🎞  Historia y Temática de CódiGol ⚽
 
-En **CódiGol**, el jugador se une a los **Wind Jaguars**, un equipo decidido a conquistar la **Full Stack League**. Desde el primer momento, el entrenador te da la bienvenida al equipo y te explica cómo funcionará tu entrenamiento: en cada partido, aprenderás una **nueva técnica de Tailwind CSS**.
+En **CódiGol**, el jugador se une a los **Wind Jaguars**, un equipo decidido a conquistar la **Full Stack League**. Desde el primer momento, el entrenador te da la bienvenida al equipo y te explica cómo funcionará tu entrenamiento, en cada partido aprenderás una **nueva técnica de Tailwind CSS**.
 
 El camino hacia la victoria está dividido en 10 partidos, y cada uno representa una lección clave sobre Tailwind. En el primer encuentro, por ejemplo, el jugador aprende sobre **diseño responsivo y clases de texto**. 
 
