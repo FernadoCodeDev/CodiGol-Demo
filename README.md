@@ -151,8 +151,7 @@ src/
 ├── Hook/
 │   └── ProtectedRoute.jsx    # Hook que protege rutas para usuarios autenticados con Clerk
 │
-├── Page/
-│   └── ProtectedRoute.jsx    # Páginas que muestra contenido de cada escena
+├── Page/                     # Páginas que muestra contenido de cada escena de Screens
 │
 ├── screens/
 │   ├── LessonIntro.jsx       # Introducción teórica de cada lección
