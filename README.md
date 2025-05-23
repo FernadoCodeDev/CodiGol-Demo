@@ -4,11 +4,11 @@
 
 **CódiGol** es un pequeño videojuego web diseñado para ayudarte a aprender y practicar Tailwind CSS de forma divertida y diferente. Inspirado en la emoción del fútbol, este juego te reta a anotar goles completando desafíos de diseño utilizando Tailwind.
 
-Esta idea surgió como un concepto que había descartado tiempo atrás, pero gracias a la experiencia adquirida y la motivación de la [Hackathon de MiduDev 2025](https://github.com/midudev/hackaton-clerk-2025?tab=readme-ov-file#%EF%B8%8F-c%C3%B3mo-participar-en-la-hackat%C3%B3n), decidí retomarla y convertirla en una demo funcional. El desarrollo se realizó en menos de 10 días, desde el 8 hasta el 21 de mayo de 2025, como parte del reto.
+Esta idea surgió como un concepto que había descartado tiempo atrás, pero gracias a la experiencia adquirida y la motivación de la [Hackathon de MiduDev 2025](https://github.com/midudev/hackaton-clerk-2025?tab=readme-ov-file#%EF%B8%8F-c%C3%B3mo-participar-en-la-hackat%C3%B3n), decidí retomarla y convertirla en una demo funcional. El desarrollo **se realizó en menos de 10 días, desde el 8 hasta el 21 de mayo de 2025**, como parte del reto.
 
 Inicialmente, el proyecto estaba pensado para enseñar JavaScript, pero al notar que ya existen muchas plataformas enfocadas en eso, decidí optar por **Tailwind CSS**, ya que más allá de su documentación oficial, no encontré recursos prácticos e interactivos para aprenderlo. Por eso, este proyecto busca ser una forma diferente, entretenida y dinámica de dominar **Tailwind CSS**, combinando aprendizaje y mecánicas de juego.
 
-Como parte del desarrollo para la [Hackathon de MiduDev 2025](https://github.com/midudev/hackaton-clerk-2025?tab=readme-ov-file#%EF%B8%8F-c%C3%B3mo-participar-en-la-hackat%C3%B3n), se integró [Clerk SDK](https://clerk.com/docs) para la autenticación de usuarios: es necesario registrarse o iniciar sesión para poder jugar.
+Como parte del desarrollo para la [Hackathon de MiduDev 2025](https://github.com/midudev/hackaton-clerk-2025?tab=readme-ov-file#%EF%B8%8F-c%C3%B3mo-participar-en-la-hackat%C3%B3n), se integró [Clerk SDK](https://clerk.com/docs) para la autenticación de usuarios donde **es necesario registrarse o iniciar sesión para poder jugar**.
 
 ## 🌐 Enlace a la demo
 
@@ -38,13 +38,13 @@ Cuando un usuario intenta iniciar el juego sin estar autenticado, se activa auto
 
 A continuación se muestran capturas del flujo de autenticación:
 
-<p align="center"> <img src="https://github.com/FernadoCodeDev/CodiGol-Demo/blob/main/ImageReadme/imgReadmeN1.webp"alt="Pantalla de inicio protegida por Clerk" /> <br/> <em>Pantalla inicial con botón de acceso</em> </p> <p align="center"> <img src="https://github.com/FernadoCodeDev/CodiGol-Demo/blob/main/ImageReadme/imgReadmeN2.webp" alt="Modal de login de Clerk" /> <br/> <em></em>Modal con una pequeña Introducción sobre CódiGol </p> <p align="center"> <img src="https://github.com/FernadoCodeDev/CodiGol-Demo/blob/main/ImageReadme/imgReadmeN3.webp" alt="Usuario autenticado" /> <br/> <em>Modal de login de [Clerk SDK](https://clerk.com/docs) Integrado</em> </p> <p align="center"> <img src="https://github.com/FernadoCodeDev/CodiGol-Demo/blob/main/ImageReadme/imgReadmeN4.webp"  alt="Protección de rutas con Clerk" /> <br/> <em>Verificación de Rutas protegidas que verifican si el usuario ya ha iniciado sesión de otro modo lo redirige a la página principal</em> </p>
+<p align="center"> <img src="https://github.com/FernadoCodeDev/CodiGol-Demo/blob/main/ImageReadme/imgReadmeN1.webp"alt="Pantalla de inicio protegida por Clerk" /> <br/> <em>Pantalla inicial con botón de acceso</em> </p> <p align="center"> <img src="https://github.com/FernadoCodeDev/CodiGol-Demo/blob/main/ImageReadme/imgReadmeN2.webp" alt="Modal de login de Clerk" /> <br/> <em></em>Modal con una pequeña Introducción sobre CódiGol </p> <p align="center"> <img src="https://github.com/FernadoCodeDev/CodiGol-Demo/blob/main/ImageReadme/imgReadmeN3.webp" alt="Usuario autenticado" /> <br/> <em>Modal de login de Clerk SDK Integrado</em> </p> <p align="center"> <img src="https://github.com/FernadoCodeDev/CodiGol-Demo/blob/main/ImageReadme/imgReadmeN4.webp"  alt="Protección de rutas con Clerk" /> <br/> <em>Verificación de Rutas protegidas que verifican si el usuario ya ha iniciado sesión de otro modo lo redirige a la página principal</em>   </p>
 
 # Detalles del Juego 
 
 ## 🎞  Historia y Temática de CódiGol ⚽
 
-En **CódiGol**, el jugador se une a los **Wind Jaguars**, un equipo decidido a conquistar la **Full Stack League**. Desde el primer momento, el entrenador te da la bienvenida al equipo y te explica cómo funcionará tu entrenamiento: en cada partido, aprenderás una **nueva técnica de Tailwind CSS**.
+En **CódiGol**, el jugador se une a los **Wind Jaguars**, un equipo decidido a conquistar la **Full Stack League**. Desde el primer momento, el entrenador te da la bienvenida al equipo y te explica cómo funcionará tu entrenamiento, en cada partido aprenderás una **nueva técnica de Tailwind CSS**.
 
 El camino hacia la victoria está dividido en 10 partidos, y cada uno representa una lección clave sobre Tailwind. En el primer encuentro, por ejemplo, el jugador aprende sobre **diseño responsivo y clases de texto**. 
 
@@ -84,7 +84,7 @@ Al final del partido, se muestra el resultado, que determinará la posición del
 - 🤝 Empate = 1 punto
 - ❌ Derrota = 0 puntos
 
-El objetivo final es **sumar la mayor cantidad de puntos** a lo largo de la liga y convertirte en el campeón de la Full Stack League, dominando las técnicas más importantes de Tailwind CSS en el camino.
+El objetivo final es **sumar la mayor cantidad de puntos** a lo largo de la liga y convertirte en el campeón de la Full Stack League, dominando las técnicas más importantes de **Tailwind CSS** en el camino.
 
 <img src="https://github.com/FernadoCodeDev/CodiGol-Demo/blob/main/ImageReadme/imgReadmeN9.webp" alt="imgReadmeN9" /> 
 
@@ -100,13 +100,13 @@ Este modal tiene como objetivo evitar problemas de visualización y usabilidad, 
 
 - Ganar la liga enfrentando a 10 equipos diferentes
 - Resolver ejercicios reales de Tailwind para avanzar
-- Mejorar tus habilidades de TailwindCSS en un contexto práctico y divertido
+- Mejorar tus habilidades de **TailwindCSS** en un contexto práctico y divertido
 
 ## 📋 Notas técnicas
 
 - Cada pantalla está pensada como una fase: introducción, entrenamiento, partido y resultado.
 - Los ejercicios se evalúan en tiempo real y afectan el marcador.
-- Las rutas están protegidas con Clerk por que si se intenta acceder lo redireccionará a la página principal.
+- Las rutas están protegidas con [Clerk SDK](https://clerk.com/docs) por que si se intenta acceder lo redireccionará a la página principal.
 
 ## 🚀 Instalación y uso local
 
@@ -120,7 +120,6 @@ Si deseas correr **CódiGol** en tu máquina local, sigue estos pasos:
 4. Inicia el servidor de desarrollo
     ```
      npm start
-    
 ## ⚡ ¿Por qué usar npm start?
 **CódiGol** está construido con React, por lo que requiere un entorno de desarrollo para compilar y visualizar correctamente la aplicación.
 El comando npm start inicia el servidor de desarrollo de React, permitiendo ver los cambios en tiempo real.
@@ -152,8 +151,7 @@ src/
 ├── Hook/
 │   └── ProtectedRoute.jsx    # Hook que protege rutas para usuarios autenticados con Clerk
 │
-├── Page/
-│   └── ProtectedRoute.jsx    # Páginas que muestra contenido de cada escena
+├── Page/                     # Páginas que muestra contenido de cada escena de Screens
 │
 ├── screens/
 │   ├── LessonIntro.jsx       # Introducción teórica de cada lección
@@ -202,4 +200,4 @@ src/
 - A ti, por jugar y aprender con **CódiGol** y leer este readMe.
 
 ## 📜 Licencia
-Este proyecto fue desarrollado exclusivamente para la [Hackathon de MiduDev 2025](https://github.com/midudev/hackaton-clerk-2025?tab=readme-ov-file#%EF%B8%8F-c%C3%B3mo-participar-en-la-hackat%C3%B3n) y está disponible con fines educativos y demostrativos.
+Este proyecto fue desarrollado como proyecto para la [Hackathon de MiduDev 2025](https://github.com/midudev/hackaton-clerk-2025?tab=readme-ov-file#%EF%B8%8F-c%C3%B3mo-participar-en-la-hackat%C3%B3n) y está disponible con fines educativos y demostrativos.
