@@ -62,7 +62,7 @@ const DialogueBox = ({ level = 1, currentPhase, onFinishDialog }) => {
   const isTrainer = speaker === "trainer";
 
   return (
-    <div className="flex items-end justify-end max-w-7xl">
+    <div className="flex items-end justify-end  max-w-7xl">
       {isTrainer && (
         <img
           src={TrainerPose1}
@@ -71,7 +71,7 @@ const DialogueBox = ({ level = 1, currentPhase, onFinishDialog }) => {
         />
       )}
 
-      <div className="flex-1 w-full max-w-4xl p-6 mb-4 mr-4 text-lg text-black bg-white rounded-lg shadow-xl bg-opacity-80 md:text-xl">
+      <div className=" flex-1 h-[25%] w-full max-w-4xl bottom-0 p-6 mb-4 mr-4 text-lg text-white bg-black/50 backdrop-blur-[3px] rounded-lg shadow-xl bg-opacity-80 md:text-xl">
         <p>{text}</p>
         {index < currentDialogue.length - 1 ? (
           <button
