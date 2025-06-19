@@ -10,6 +10,20 @@ Inicialmente, el proyecto estaba pensado para enseñar JavaScript, pero al notar
 
 Como parte del desarrollo para la [Hackathon de MiduDev 2025](https://github.com/midudev/hackaton-clerk-2025?tab=readme-ov-file#%EF%B8%8F-c%C3%B3mo-participar-en-la-hackat%C3%B3n), se integró [Clerk SDK](https://clerk.com/docs) para la autenticación de usuarios donde **es necesario registrarse o iniciar sesión para poder jugar**.
 
+## 🏅 Mención Especial en la Final de la Hackathon de Midudev 
+
+Durante la transmisión final de la Hackathon organizada por [Midudev](https://www.twitch.tv/videos/2465451345) y [Clerk SDK](https://clerk.com/docs), ¡**CódiGol** fue destacado como uno de los proyectos más originales! ⚽🔥
+
+> *"Luego también hay gente que se ha atrevido a hacer como una plataforma para aprender Tailwind. Se llama CódiGol. Tienes el entrenador, el coach aquí. Y entonces te va explicando la técnica del responsive y tal... Golazo. Has dominado la técnica..."*  
+> — *Midudev en el stream de la final de la Hackathon 2025*
+
+😅 Sí, el entrenador hablaba un poquito de más en la introducción (¡gracias por ese feedback, Midu!), pero ya lo solucioné: **ahora los diálogos son más cortos y directos al grano**, para que la experiencia sea más ágil y divertida.
+
+📺 **Puedes ver ese momento aquí (¡es un tremendo golazo!):**
+
+[![Ver mención en el stream](https://img.youtube.com/vi/0Z0Vy0VWQeY/hqdefault.jpg)](https://www.youtube.com/watch?v=0Z0Vy0VWQeY)
+
+
 ## 🌐 Enlace a la demo
 
 [Juega CódiGol ahora](https://codigol-demo.netlify.app/)  
@@ -122,7 +136,7 @@ Si deseas correr **CódiGol** en tu máquina local, sigue estos pasos:
      npm start
 ## ⚡ ¿Por qué usar npm start?
 **CódiGol** está construido con React, por lo que requiere un entorno de desarrollo para compilar y visualizar correctamente la aplicación.
-El comando npm start inicia el servidor de desarrollo de React, permitiendo ver los cambios en tiempo real.
+El comando `npm start` inicia el servidor de desarrollo de React, permitiendo ver los cambios en tiempo real.
 
 ## 🚧  Estructura del proyecto 🧱
 La arquitectura de **CódiGol** está pensada para mantener el código limpio, modular y fácil de escalar. Aquí se explica cada carpeta y archivo clave del proyecto:
