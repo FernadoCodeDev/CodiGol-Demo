@@ -25,7 +25,6 @@ Durante la transmisión final de la Hackathon organizada por [Midudev](https://w
 
 [![Ver mención en el stream](https://img.shields.io/static/v1?message=youtube&logo=Youtube&label=&color=c91e1e&logoColor=white&labelColor=&style=for-the-badge)](https://www.youtube.com/watch?v=0Z0Vy0VWQeY)
 
-
 ## 🌐 Enlace a la demo
 
 [![Juega CódiGol ahora](https://img.shields.io/static/v1?message=Juega-CódiGol-ahora&logo=itchdotio&label=&color=fff&logoColor=black&labelColor=&style=for-the-badge)](https://codigol-demo.netlify.app/)
@@ -221,5 +220,3 @@ src/
 
 ## 📜 Licencia
 Este proyecto fue desarrollado como proyecto para la [Hackathon de MiduDev 2025](https://github.com/midudev/hackaton-clerk-2025?tab=readme-ov-file#%EF%B8%8F-c%C3%B3mo-participar-en-la-hackat%C3%B3n) y está disponible con fines educativos y demostrativos.
-
-
