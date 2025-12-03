@@ -23,10 +23,11 @@ Durante la transmisión final de la Hackathon organizada por [Midudev](https://w
 
 [![Ver mención en el stream](https://img.youtube.com/vi/0Z0Vy0VWQeY/hqdefault.jpg)](https://www.youtube.com/watch?v=0Z0Vy0VWQeY)
 
+[![Ver mención en el stream](https://img.shields.io/static/v1?message=youtube&logo=Youtube&label=&color=c91e1e&logoColor=white&labelColor=&style=for-the-badge)](https://www.youtube.com/watch?v=0Z0Vy0VWQeY)
 
 ## 🌐 Enlace a la demo
 
-[Juega CódiGol ahora](https://codigol-demo.netlify.app/)  
+[![Juega CódiGol ahora](https://img.shields.io/static/v1?message=Juega-CódiGol-ahora&logo=itchdotio&label=&color=fff&logoColor=black&labelColor=&style=for-the-badge)](https://codigol-demo.netlify.app/)
 
 ## 🧠 ¿Qué aprenderás?
 
@@ -36,9 +37,13 @@ Durante la transmisión final de la Hackathon organizada por [Midudev](https://w
 
 ## 🛠 Tecnologías utilizadas
 
-[![My Skills](https://skillicons.dev/icons?i=js,react,tailwind)](https://skillicons.dev)
+<div align="left">
 
-- [Clerk SDK](https://clerk.com/docs) ( para el sistema de login )
+![javascript](https://img.shields.io/static/v1?message=javascript&logo=javascript&label=&color=d6bb38&logoColor=black&labelColor=&style=for-the-badge)
+![React](https://img.shields.io/static/v1?message=React&logo=React&label=&color=1082a7&logoColor=white&labelColor=&style=for-the-badge)
+![TailwindCSS](https://img.shields.io/static/v1?message=TailwindCSS&logo=TailwindCSS&label=&color=3ebff8&logoColor=white&labelColor=&style=for-the-badge)
+![ClerK](https://img.shields.io/static/v1?message=clerk-para-el-sistema-de-login&logo=clerk&label=&color=714dff&logoColor=white&labelColor=&style=for-the-badge)
+  </div >
 
  ## 🔐 Autenticación con Clerk
 
@@ -106,7 +111,7 @@ El objetivo final es **sumar la mayor cantidad de puntos** a lo largo de la liga
 
 **CódiGol** ha sido diseñado para ofrecer la mejor experiencia en pantallas grandes, ya que cuenta con un editor de código integrado que requiere espacio suficiente para su uso cómodo y funcional. Por esta razón, cuando el juego se ejecuta en dispositivos con un ancho de pantalla menor a **1280px**, se muestra un modal informativo que indica que el tamaño de la pantalla no es el adecuado.
 
-Este modal tiene como objetivo evitar problemas de visualización y usabilidad, especialmente en **celulares o tablets**, donde el entorno de desarrollo no sería óptimo. Para disfrutar de **CódiGol** correctamente, se recomienda utilizarlo en una computadora de escritorio o laptop con una resolución igual o superior a 1280px de ancho.
+Este modal tiene como objetivo evitar problemas de visualización y usabilidad, especialmente en **celulares o tablets**, donde el entorno de desarrollo no sería óptimo. Para disfrutar de **CódiGol** correctamente, se recomienda utilizarlo en una computadora de escritorio o laptop con una **resolución igual o superior a 1280px de ancho.**
 
 <img src="https://github.com/FernadoCodeDev/CodiGol-Demo/blob/main/assets/img/imgReadmeN10.webp" alt="imgReadmeN10" /> 
 
