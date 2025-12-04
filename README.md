@@ -42,8 +42,10 @@ Durante la transmisión final de la Hackathon organizada por [Midudev](https://w
 ![javascript](https://img.shields.io/static/v1?message=javascript&logo=javascript&label=&color=d6bb38&logoColor=black&labelColor=&style=for-the-badge)
 ![React](https://img.shields.io/static/v1?message=React&logo=React&label=&color=1082a7&logoColor=white&labelColor=&style=for-the-badge)
 ![TailwindCSS](https://img.shields.io/static/v1?message=TailwindCSS&logo=TailwindCSS&label=&color=3ebff8&logoColor=white&labelColor=&style=for-the-badge)
+![pnpm](https://img.shields.io/static/v1?message=pnpm&logo=pnpm&label=&color=F69220&logoColor=white&labelColor=&style=for-the-badge)
 ![ClerK](https://img.shields.io/static/v1?message=clerk-para-el-sistema-de-login&logo=clerk&label=&color=714dff&logoColor=white&labelColor=&style=for-the-badge)
-  </div >
+
+</div >
 
  ## 🔐 Autenticación con Clerk
 
@@ -220,3 +222,4 @@ src/
 
 ## 📜 Licencia
 Este proyecto fue desarrollado como proyecto para la [Hackathon de MiduDev 2025](https://github.com/midudev/hackaton-clerk-2025?tab=readme-ov-file#%EF%B8%8F-c%C3%B3mo-participar-en-la-hackat%C3%B3n) y está disponible con fines educativos y demostrativos.
+
